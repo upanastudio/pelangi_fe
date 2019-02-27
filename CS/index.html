@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<html lang="en" >
+	<!-- begin::Head -->
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			CS | Dashboard
+		</title>
+		<meta name="description" content="Latest updates and statistic charts">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--begin::Web font -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+          WebFont.load({
+            google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+          });
+		</script>
+		<script src="utils.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+		<!--end::Web font -->
+        <!--begin::Base Styles -->  
+        <!--begin::Page Vendors -->
+		<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendors -->
+		<link href="../assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<!-- begin:: Style tambahan -->
+		<link href="../assets/demo/default/base/pelangi-style.css" rel="stylesheet" type="text/css">
+		<!-- end:: Style tambahan -->
+		<!--end::Base Styles -->
+		<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
+		<style type="text/css">
+			.alert {
+				padding: 0.4rem 1.5rem !important;
+				width: 70%
+			}
+			@media (min-width: 992px) {
+				.modal-lg {
+					max-width: 90% !important;
+				}
+			}
+			
+		</style>
+	</head>
+	<!-- end::Head -->
+    <!-- end::Body -->
+	<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+		<!-- begin:: Page -->
+		<div class="m-grid m-grid--hor m-grid--root m-page">
+			<!-- BEGIN: Header -->
+			<header class="m-grid__item    m-header "  data-minimize-offset="200" data-minimize-mobile-offset="200" >
+				<div class="m-container m-container--fluid m-container--full-height">
+					<div class="m-stack m-stack--ver m-stack--desktop">
+						<!-- BEGIN: Brand -->
+						<div class="m-stack__item m-brand  m-brand--skin-dark ">
+							<div class="m-stack m-stack--ver m-stack--general">
+								<div class="m-stack__item m-stack__item--middle m-brand__logo">
+									<a href="index.html" class="m-brand__logo-wrapper">
+										<img alt="" src="../assets/demo/default/media/img/logo/logo_default_dark.png"/>
+									</a>
+								</div>
+								<div class="m-stack__item m-stack__item--middle m-brand__tools">
+									<!-- BEGIN: Left Aside Minimize Toggle -->
+									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block">
+										<span></span>
+									</a>
+									<!-- END -->
+							<!-- BEGIN: Responsive Aside Left Menu Toggler -->
+									<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
+										<span></span>
+									</a>
+									<!-- END -->
+							<!-- BEGIN: Responsive Header Menu Toggler -->
+									<a id="m_aside_header_menu_mobile_toggle" href="javascript:;" class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block">
+										<span></span>
+									</a>
+									<!-- END -->
+							<!-- BEGIN: Topbar Toggler -->
+									<a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" class="m-brand__icon m--visible-tablet-and-mobile-inline-block">
+										<i class="flaticon-more"></i>
+									</a>
+									<!-- BEGIN: Topbar Toggler -->
+								</div>
+							</div>
+						</div>
+						<!-- END: Brand -->
+						<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
+							<!-- BEGIN: Horizontal Menu -->
+							<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
+								<img style="display: inline; float: left; height: inherit; width: auto" src="../assets/demo/default/media/img/misc/customer_service.png">
+							</div>
+							<!-- END: Horizontal Menu -->								
+							<!-- BEGIN: Topbar -->
+							<div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
+								<div class="m-stack__item m-topbar__nav-wrapper inline">
+									<ul class="m-topbar__nav m-nav m-nav--inline">
+										<li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click">
+											<div class="user_wrapper">
+												<p style="margin-bottom: 0px"><i class="fa fa-user"> </i> Ahmad Rifaldi</p>
+											</div>
+										</li>
+										<li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click">
+											<div class="logout_wrapper">
+												<a margin-right: 10px;" href="snippets/pages/user/login-1.html" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
+													Logout
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- END: Topbar -->
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- END: Header -->		
+			<!-- begin::Body -->
+			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+				<!-- BEGIN: Left Aside -->
+				<button class="m-aside-left-close  m-aside-left-close--skin-dark " id="m_aside_left_close_btn">
+					<i class="la la-close"></i>
+				</button>
+				<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
+					<!-- BEGIN: Aside Menu -->
+					<div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark" data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500" >
+						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
+							<!-- DASHBOARD -->
+							<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
+								<a  href="index.html" class="m-menu__link ">
+									<i class="m-menu__link-icon flaticon-line-graph"></i>
+									<span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Dashboard
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<!-- PESANAN -->
+							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
+								<a href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon flaticon-graphic-2"></i>
+									<span class="m-menu__link-text">
+										Pesanan
+									</span>
+									<i style="font-size: 1.5rem" class="m-menu__ver-arrow fa fa-caret-right"></i>
+								</a>
+								<div class="m-menu__submenu " style="">
+									<span class="m-menu__arrow"></span>
+									<ul class="m-menu__subnav">
+										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
+											<span class="m-menu__link">
+												<span class="m-menu__link-text">
+													Pesanan
+												</span>
+											</span>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="components/base/pesanan_belum_lunas.html" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Pesanan Belum Lunas
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="components/base/pesanan_lunas.html"  class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Pesanan Lunas
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="components/base/pesanan_ditolak.html"  class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Pesanan Ditolak
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="components/base/pesanan_saya.html"  class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Pesanan Saya
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+	                        <!-- KEHADIRAN -->
+							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
+								<a href="components/base/kehadiran.html" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-user-o"></i>
+									<span class="m-menu__link-text">
+										Kehadiran
+									</span>
+								</a>
+							</li>
+							<!-- Setting -->
+							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
+								<a href="components/base/setting.html" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa 	fa-gears"></i>
+									<span class="m-menu__link-text">
+										Pengaturan
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- END: Aside Menu -->
+				</div>
+				<!-- END: Left Aside -->
+				<div class="m-grid__item m-grid__item--fluid m-wrapper">
+					<!-- BEGIN: Subheader -->
+					<div class="m-subheader ">
+						<div class="d-flex align-items-center">
+							<div class="mr-auto">
+								<h3 class="m-subheader__title m-subheader__title--separator">
+									Dashboard
+								</h3>
+								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+									<li class="m-nav__item m-nav__item--home">
+										<a href="index.html" class="m-nav__link m-nav__link--icon">
+											<i class="m-nav__link-icon la la-home"></i>
+										</a>
+									</li>
+								</ul>
+								<button type="button" name="lihat_inventory" class="btn btn-primary btn-tambahPembelian" data-toggle="modal" data-target="#lihat_inventory">
+									Lihat Inventory
+								</button>	
+							</div>
+						</div>
+					</div>
+					<!-- END: Subheader -->
+					<div class="m-content">
+						<!--Begin::Section-->
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="m-portlet ">
+									<div class="m-portlet__head portlet_head_color">
+										<div class="m-portlet__head-caption">
+											<div class="m-portlet__head-title">
+												<h3 style="color: white" class="m-portlet__head-text col-4">
+													No. Pesanan
+												</h3>
+												<h3 style="color: #E0F2F1" class="m-portlet__head-text col-6">
+													#1234567
+												</h3>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-6">
+								<!--begin::Portlet--> <!-- NOMER PESANAN -->
+								<div class="m-portlet m-portlet--mobile">
+									<!--begin::Form-->
+									<form class="m-form">
+										<div class="m-portlet__body">
+											<div class="m-form__section m-form__section--first">
+												<div class="form-group m-form__group">
+													<label id="sub-header-form">
+														Informasi Pelanggan
+													</label> <br>
+												</div>
+												<div class="form-group m-form__group">
+													<label >
+														 Nomer Telpon :
+													</label>
+													<div >
+														<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																	<i class="la la-phone"></i>
+																</span>
+															</div>
+															<input type="text" name="noTlp_pelanggan" class="form-control m-input" placeholder="" value="085-145-322-xxx">
+														</div>
+													</div>
+												</div>
+												<div class="form-group m-form__group ">
+													<label>
+														 Nama :
+													</label>
+													<div >
+														<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																	<i class="fa fa-user-o"></i>
+																</span>
+															</div>
+															<input type="text" name="nama_pelanggan" class="form-control m-input" value="Ahmad Ridwan">
+														</div>
+													</div>
+												</div>
+												<div class="form-group m-form__group ">
+													<label>
+														 Alamat:
+													</label>
+													<div >
+														<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																	<i class="flaticon-placeholder"></i>
+																</span>
+															</div>
+															<input type="text" name="alamat_pelanggan" class="form-control m-input" placeholder="" value="Jln. Poros Malino, Griya Riski Abadi Blok C6">
+														</div>
+													</div>
+												</div>
+												<div class="form-group m-form__group ">
+													<label>
+														 E-mail:
+													</label>
+													<div >
+														<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																	<i class="fa fa-envelope-o"></i>
+																</span>
+															</div>
+															<input type="email" name="email_kostumer" class="form-control m-input" placeholder="" value="jakirolast@gmail.com">
+														</div>
+													</div>
+												</div>
+												<div class="m-form__group form-group">
+													<label for="">
+														Tipe Pelanggan
+													</label>
+													<div class="m-radio-inline">
+														<label class="m-radio">
+															<input type="radio" name="tipe_pelanggan" value="perseorangan">
+															Perseorangan
+															<span></span>
+														</label>
+														<label class="m-radio">
+															<input type="radio" name="tipe_pelanggan" value="perusahaan">
+															Perusahaan
+															<span></span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="m-portlet__foot m-portlet__foot--fit">
+											<div class="m-form__actions m-form__actions">
+												<button type="button" class="btn btn-primary btn-tambahPesanan" data-toggle="modal" data-target="#myModal">
+													Tambah Pesanan
+												</button>
+											</div>
+										</div>
+									</form>
+									<!--end::Form-->
+								</div>
+								<!--end::Portlet-->
+							</div>
+							<div class="col-xl-6">
+								<div class="m-portlet m-portlet--mobile">
+									<div class="m-portlet__head">
+										<div class="m-portlet__head-caption">
+											<div class="m-portlet__head-title">
+												<h3 class="m-portlet__head-text">
+													Pesanan
+												</h3>
+											</div>
+										</div>
+									</div>
+									<div class="m-portlet__body" class="m-scrollable" data-scrollable="true" data-max-height="540" data-scrollbar-shown="true">
+										<div class="list-pesanan" >
+											<label>
+												<h5>Pesanan 1</h5>
+											</label>
+											<div class="alert alert-danger" role="alert">
+												<strong>
+													Peringatan! 
+												</strong>
+												Bahan A telah habis
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Nama Pesanan :
+												</label>
+												<input name="nama_pesanan" type="text" value="Kartu nama" class="form-control m-input" disabled="">
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Jumlah Pesanan :
+												</label>
+												<input name="jumlah_pesanan" type="text" value="3 box" class="form-control m-input" disabled="">
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Ukuran :
+												</label>
+												<input name="ukuran" type="text" value="-" class="form-control m-input" disabled="">
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Jenis Finishing :
+												</label>
+												<input name="jenis_finishing" type="text" value="-" class="form-control m-input" disabled="">
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Jumlah Finishing :
+												</label>
+												<input name="jumlah_Finishing" type="text" value="-" class="form-control m-input" disabled="">
+											</div>
+											<hr>
+										</div>
+										<div style="padding-top: 20px" class="list-pesanan">
+											<label>
+												<h5>Pesanan 2</h5>
+											</label>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Nama Pesanan :
+												</label>
+												<input name="nama_pesanan" type="text" value="Spanduk Pengabdian" class="form-control m-input" disabled="">
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Jumlah Pesanan :
+												</label>
+												<input name="jumlah_pesanan" type="text" value="2" class="form-control m-input" disabled="">
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Ukuran :
+												</label>
+												<input name="ukuran" type="text" value="160 x 60 cm" class="form-control m-input" disabled="">
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Jenis Finishing :
+												</label>
+												<input name="jenis_finishing" type="text" value="-" class="form-control m-input" disabled="">
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Jumlah Finishing :
+												</label>
+												<input name="jumlah_Finishing" type="text" value="-" class="form-control m-input" disabled="">
+											</div>
+											<hr>
+										</div>
+										<div style="padding-top: 20px" class="list-pesanan">
+											<label>
+												<h5>Pesanan 3</h5>
+											</label>
+											<div class="alert alert-danger" role="alert">
+												<strong>
+													Peringatan! 
+												</strong>
+												Bahan B telah habis
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Nama Pesanan :
+												</label>
+												<input name="nama_pesanan" type="text" class="form-control m-input" disabled="">
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Jumlah Pesanan :
+												</label>
+												<input name="jumlah_pesanan" type="text" class="form-control m-input" disabled="">
+											</div>
+											<div  class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Ukuran :
+												</label>
+												<input name="ukuran" type="text" value="-" class="form-control m-input" disabled="">
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Jenis Finishing :
+												</label>
+												<input name="jenis_finishing" type="text" value="-" class="form-control m-input" disabled="">
+											</div>
+											<div class="form-group m-form__group">
+												<label for="example_input_full_name">
+													Jumlah Finishing :
+												</label>
+												<input name="jumlah_Finishing" type="text" value="-" class="form-control m-input" disabled="">
+											</div>
+											<hr>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-12">
+								<!--begin::Portlet-->
+								<div class="m-portlet m-portlet--mobile">
+									<!--begin::Form-->
+									<form class="m-form">
+										<div class="m-portlet__body">
+											<div class="m-form__section m-form__section--first">
+												<div class="form-group m-form__group">
+													<label id="sub-header-form">
+												    	Harga
+											        </label> <br>
+											        <div class="m-form__group form-group">
+														<label for="">
+															Tipe Pesanan
+														</label>
+														<div class="m-radio-list">
+															<label class="m-radio">
+																<input type="radio" name="tipe_pesanan" value="express">
+																Express
+																<span></span>
+															</label>
+															<label class="m-radio">
+																<input type="radio" name="tipe_pesanan" value="preorder">
+																Pre-order
+																<span></span>
+															</label>	
+														</div>
+												    </div>
+												</div>
+												<div class="form-group m-form__group ">
+													<label>
+														 Estimasi waktu :
+													</label>
+													<div >
+														<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																	<i class="flaticon-time-3"></i>
+																</span>
+															</div>
+															<input type="text" name="estimasi_waktu" class="form-control m-input" value="2 hari">
+														</div>
+													</div>
+												</div>
+												<div class="form-group m-form__group">
+													<label>
+														Harga :
+													</label>
+													<div >
+														<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																	Rp.
+																</span>
+															</div>
+															<input type="text" name="harga_pesanan" class="form-control m-input" value="120000">
+														</div>
+													</div>
+												</div>
+												<div class="form-group m-form__group">
+													<label>
+														Diskon :
+													</label>
+													<div >
+														<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																	<i class="fa fa-tag"></i>
+																</span>
+															</div>
+															<input type="text" name="diskon_pesanan" class="form-control m-input" value="-20000">
+														</div>
+													</div>
+												</div>
+												<div class="form-group m-form__group">
+													<label>
+														Down payment :
+													</label>
+													<div>
+														<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">
+																	Rp.
+																</span>
+															</div>
+															<input type="text" name="down_payment" class="form-control m-input" value="60000">
+														</div>
+													</div>
+												</div>
+												<div class="m-form__group form-group">
+													<label for="">
+														Tipe Pembayaran
+													</label>
+													<div class="m-radio-list col-md-12">
+														<label class="radio-inline col-3">
+															<input type="radio" name="tipe_pembayaran" value="cash">
+															Cash
+															<span></span>
+														</label>
+														<label class="radio-inline col-3">
+															<input type="radio" name="tipe_pembayaran" value="edc">
+															EDC
+															<span></span>
+														</label>
+														<label class="radio-inline col-4">
+															<input type="radio" name="tipe_pembayaran" value="transfer">
+															Transfer
+															<span></span>
+														</label>
+													</div>
+												</div>
+											    <div class="form-group m-form__group">
+												  	<label for="exampleTextarea">
+													Catatan :
+												  	</label>
+												  	<textarea name="catatan" style="resize: none; overflow: hidden;" class="form-control m-input" id="exampleTextarea" rows="6">
+												  	</textarea>
+											    </div>		
+											</div>
+										</div>
+										<div class="m-portlet__foot m-portlet__foot--fit">
+											<div class="m-form__actions m-form__actions">
+												<button id="send" type="reset" class="btn btn-primary btn-kirimPesan">
+													Order
+												</button>
+											</div>
+										</div>
+									</form>
+									<!--end::Form-->
+								</div>
+								<!--end::Portlet-->
+							</div>
+						</div>
+						<!--End::Section-->
+					</div>
+				</div>
+			</div>
+			<!-- end:: Body -->
+			<!-- begin::Footer -->
+			<footer class="m-grid__item		m-footer ">
+				<div class="m-container m-container--fluid m-container--full-height m-page__container">
+					<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+						<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+							<span class="m-footer__copyright">
+								Upa'na Studio
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- MODAL -->
+				<div class="modal fade tampilan-modal" id="myModal" role="dialog">
+		          <div class="modal-dialog">
+		          	<!-- Modal Konten -->
+		          	<div class="modal-content">
+		          		<div class="modal-body">
+		          			<div class="m-portlet__body">
+								<div class="m-form__section m-form__section--first">
+									<div class="form-group m-form__group">
+										<label id="sub-header-form">
+											Pesanan
+										</label> <br>
+										<div class="form-group m-form__group">
+									    	<label for="exampleSelect1" style="display: inline-block;">
+										    Tipe Produk
+									    	</label>
+								    		<select style="width: 100%" class="form-control m-select2 dropdown_search" name="tipe_produk">
+												<option value="1">
+													Spanduk
+												</option>
+												<option value="1">
+													Kartu nama
+												</option>
+												<option value="1">
+													Brochure
+												</option>
+												<option value="1">
+													Baliho
+												</option>
+												<option value="1">
+													Name Tag
+												</option>
+												<option value="1">
+													Tipe n
+												</option>
+												<option value="1">
+													Tipe n
+												</option>
+												<option value="1">
+													Tipe n
+												</option>
+												<option value="1">
+													Tipe n
+												</option value="1">
+												<option>
+													Tipe n
+												</option>
+												<option value="1">
+													Tipe n
+												</option>
+											</select>
+								        </div>
+									</div>
+									<div class="form-group m-form__group">
+								    	<label style="display: block;" for="exampleSelect1">
+									    Jenis Bahan
+								    	</label>
+								     	<select style="width: 100%" class="form-control m-select2 dropdown_search" name="jenis_bahan">
+											<option value="1">
+												Bahan 1
+											</option>
+											<option value="1">
+												Bahan 2
+											</option>
+											<option value="1">
+												Bahan 3
+											</option>
+											<option value="1">
+												Bahan 4
+											</option>
+											<option value="1">
+												Bahan 5
+											</option>
+											<option value="1">
+												Bahan 6
+											</option>
+											<option value="1">
+												Bahan 7
+											</option>
+											<option value="1">
+												Bahan 8
+											</option>
+											<option value="1">
+												Bahan 9
+											</option>
+											<option value="1">
+												Bahan 10
+											</option>
+											<option value="1">
+												Bahan 11
+											</option>
+											<option value="1">
+												Bahan 12
+											</option >
+										</select>
+							        </div>
+							        <div class="form-group m-form__group">
+										<label for="exampleSelect1">
+											Ukuran Bahan
+										</label>
+										<select style="width: 100%" class="form-control m-select2 dropdown_search" name="ukuran_bahan">
+											<option value="bahan_1">
+												Bahan 1
+											</option >
+											<option value="bahan_2">
+												Bahan 2
+											</option>
+											<option value="bahan_3">
+												Bahan 3
+											</option>
+										</select>
+									</div>
+									<div class="form-group m-form__group">
+							            <div class="m-form__group form-group">
+											<label for="">
+												Satuan
+											</label>
+											<div class="m-radio-inline">
+												<label class="m-radio">
+													<input type="radio" name="satuan" value="box" id="box" onclick="satuanCheck();">
+													Box
+													<span></span>
+												</label>
+												<label class="m-radio">
+													<input type="radio" name="satuan" id="lembar" value="lembar" onclick="satuanCheck();">
+													Lembar
+													<span></span>
+												</label>
+												<label class="m-radio">
+													<input type="radio" name="satuan" value="pcs" id="pcs" onclick="satuanCheck();">
+													Pcs
+													<span></span>
+												</label>
+												<label class="m-radio">
+													<input type="radio" name="satuan" id="meter" value="meter" onclick="satuanCheck();">
+													Meter
+													<span></span>
+												</label>
+												<label class="m-radio">
+													<input type="radio" name="satuan" value="set" id="set" onclick="satuanCheck();">
+													Set
+													<span></span>
+												</label>
+											</div>
+										</div>
+										<div style="display: none" id="satuan_box" class="satuan-umum">
+											<div class="form-group m-form__group row">
+									        	<label for="example-text-input" class="col-3 col-form-label">
+										        jumlah
+									        	</label>
+									        	<div class="input-group col-9">
+													<input name="input_jumlah_box" type="text" class="form-control m-input" placeholder="masukkan jumlah" aria-describedby="basic-addon2">
+													<div class="input-group-append">
+														<span class="input-group-text" id="basic-addon2">
+															Box
+														</span>
+													</div>
+												</div>
+								            </div>
+										</div>
+										<div style="display: none" id="satuan_lembar" class="satuan-umum">
+											<div class="form-group m-form__group row">
+									        	<label for="example-text-input" class="col-3 col-form-label">
+										        jumlah
+									        	</label>
+									        	<div class="input-group col-9">
+													<input name="input_jumlah_lembar" type="text" class="form-control m-input" placeholder="masukkan jumlah" aria-describedby="basic-addon2">
+													<div class="input-group-append">
+														<span class="input-group-text" id="basic-addon2">
+															Lembar
+														</span>
+													</div>
+												</div>
+								            </div>
+										</div>
+										<div style="display: none" id="satuan_pcs" class="satuan-umum">
+											<div class="form-group m-form__group row">
+									        	<label for="example-text-input" class="col-3 col-form-label">
+										        jumlah
+									        	</label>
+									        	<div class="input-group col-9">
+													<input name="input_jumlah_pcs" type="text" class="form-control m-input" placeholder="masukkan jumlah" aria-describedby="basic-addon2">
+													<div class="input-group-append">
+														<span class="input-group-text" id="basic-addon2">
+															Pcs
+														</span>
+													</div>
+												</div>
+								            </div>
+										</div>
+										<div style="display: none" id="satuan_panjang" style="padding-top: 15px" class="satuan-meter">
+											<div class="form-group m-form__group row">
+									        	<label for="example-text-input" class="col-3 col-form-label">
+										        Panjang
+									        	</label>
+									        	<div class="input-group col-9">
+													<input name="input_panjang" type="text" class="form-control m-input" placeholder="masukkan panjang" aria-describedby="basic-addon2">
+													<div class="input-group-append">
+														<span class="input-group-text" id="basic-addon2">
+															meter
+														</span>
+													</div>
+												</div>
+								            </div>
+								            <div class="form-group m-form__group row">
+									        	<label for="example-text-input" class="col-3 col-form-label">
+										        	Lebar 
+									        	</label>
+									        	<div class="input-group col-9">
+													<input name="input_panjang" type="text" class="form-control m-input" placeholder="masukkan lebar" aria-describedby="basic-addon2">
+													<div class="input-group-append">
+														<span class="input-group-text" id="basic-addon2">
+															meter
+														</span>
+													</div>
+												</div>
+								            </div>
+										</div>
+										<div style="display: none" id="satuan_set" class="satuan-umum">
+											<div class="form-group m-form__group row">
+												<div class="input-group col-12">
+													<select style="width: 100%" class="form-control m-select2 dropdown_search" name="set_ukuran">
+												    	<option value="1">
+													  		1 x 2 cm
+												    	</option>
+												    	<option value="2">
+															4 x 5 m
+														</option>
+														<option value="3">
+															3 x 60 cm
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div style="display: none" id="satuan_unit" class="satuan-umum">
+											<div class="form-group m-form__group row">
+									        	<label for="example-text-input" class="col-3 col-form-label">
+										        jumlah
+									        	</label>
+									        	<div class="input-group col-9">
+													<input name="input_jumlah_box" type="text" class="form-control m-input" placeholder="masukkan jumlah" aria-describedby="basic-addon2">
+													<div class="input-group-append">
+														<span class="input-group-text" id="basic-addon2">
+															Unit
+														</span>
+													</div>
+												</div>
+								            </div>
+										</div>
+									</div>
+									<div class="form-group m-form__group">
+										<label>
+											Finishing :
+										</label> <br>
+										<div class="form-group m-form__group row">
+								        	<label for="example-text-input" class="col-4 col-form-label">
+									        	Tipe Finishing :
+								        	</label>
+								        	<div class="col-8">
+										     	<select style="width: 100%" class="form-control m-input dropdown_search" id="exampleSelect1" name="tipe_finishing" data-search="true">
+												<option value="1">
+													Tipe 1
+												</option>
+												<option value="2">
+													Tipe 2
+												</option>
+												<option value="3">
+													Tipe 3
+												</option >
+												<option value="4">
+													Tipe 4
+												</option>
+												<option value="5">
+													Tipe 5
+												</option>
+												</select>
+									          </div>
+							            </div>
+							            <div class="form-group m-form__group row">
+								        	<label for="example-text-input" class="col-4 col-form-label">
+									        	Jumlah (masih perlu?)
+								        	</label>
+								        	<div class="col-8">
+									    		<input class="form-control m-input" type="text" name="jumlah_finishing" value="" placeholder="masukkan jumlah" id="example-text-input">	
+								          	</div> 
+							            </div>
+									</div>
+									<div class="m-form__group form-group">
+										<label for="">
+											Tipe Desain
+										</label>
+										<div class="m-radio-inline col-md-12">
+											<label class="col-5">
+												<input type="radio" name="tipe_desain" value="buatbaru">
+												Buat baru
+												<span></span>
+											</label>
+											<label class="col-5">
+												<input type="radio" name="tipe_desain" value="siapcetak">
+												Siap cetak
+												<span></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+		    			</div>
+					    <div class="modal-footer">
+					    	<button id="tambah_pesanan" type="submit" class="btn btn-primary">
+										Tambah Pesanan
+							        </button>
+					        <button type="button" class="btn btn-default" data-dismiss="modal">	
+					        	Close
+					        </button>
+					    </div>
+		          	</div>
+		          </div>
+				</div>
+				<!-- END OF MODAL -->
+				<!--begin::Modal-->
+				<div class="modal fade" id="lihat_inventory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">
+									Inventory
+								</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">
+										&times;
+									</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true">
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="m-portlet m-portlet--mobile">
+												<div class="m-portlet__head">
+													<div class="m-portlet__head-caption">
+														<div class="m-portlet__head-title">
+															<div class="m-input-icon m-input-icon--left">
+																<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
+																<span class="m-input-icon__icon m-input-icon__icon--left">
+																	<span>
+																		<i class="la la-search"></i>
+																	</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="m-portlet__body">
+													<canvas id="bahan-baku"></canvas>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									Close
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end::Modal-->
+			</footer>
+			<!-- end::Footer -->
+		</div>
+		<!-- end:: Page -->		    
+	    <!-- begin::Scroll Top -->
+		<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">
+			<i class="la la-arrow-up"></i>
+		</div>
+		<!-- end::Scroll Top -->	
+    	<!--begin::Base Scripts -->
+		<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+		<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+		<!--end::Base Scripts -->   
+        <!--begin::Page Vendors -->
+		<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+		<!--end::Page Vendors -->  
+        <!--begin::Page Snippets -->
+		<!-- <script src="../assets/app/js/dashboard.js" type="text/javascript"></script> -->
+		<!--end::Page Snippets -->
+		<!-- <script src="../assets/demo/default/custom/components/forms/widgets/select2.js" type="text/javascript"></script> -->
+		<script type="text/javascript">
+			function satuanCheck() {
+		    if  (document.getElementById('box').checked) {
+		        document.getElementById('satuan_box').style.display = 'block';
+		        document.getElementById('satuan_lembar').style.display = 'none';
+		        document.getElementById('satuan_pcs').style.display = 'none';
+		        document.getElementById('satuan_panjang').style.display = 'none';
+		        document.getElementById('satuan_set').style.display = 'none';
+		        document.getElementById('satuan_unit').style.display = 'none';
+
+		    } else if (document.getElementById('lembar').checked) {
+		    	document.getElementById('satuan_box').style.display = 'none';
+		        document.getElementById('satuan_lembar').style.display = 'block';
+		        document.getElementById('satuan_pcs').style.display = 'none';
+		        document.getElementById('satuan_panjang').style.display = 'none';
+		        document.getElementById('satuan_set').style.display = 'none';
+		        document.getElementById('satuan_unit').style.display = 'none';
+
+		    } else if (document.getElementById('pcs').checked) {
+		    	document.getElementById('satuan_box').style.display = 'none';
+		        document.getElementById('satuan_lembar').style.display = 'none';
+		        document.getElementById('satuan_pcs').style.display = 'block';
+		        document.getElementById('satuan_panjang').style.display = 'none';
+		        document.getElementById('satuan_set').style.display = 'none';
+		        document.getElementById('satuan_unit').style.display = 'none';
+
+		    } else if (document.getElementById('meter').checked) {
+		    	document.getElementById('satuan_box').style.display = 'none';
+		        document.getElementById('satuan_lembar').style.display = 'none';
+		        document.getElementById('satuan_pcs').style.display = 'none';
+		        document.getElementById('satuan_panjang').style.display = 'block';
+		        document.getElementById('satuan_set').style.display = 'none';
+		        document.getElementById('satuan_unit').style.display = 'block';
+		    } 
+		      else if (document.getElementById('set').checked) {
+		      	document.getElementById('satuan_box').style.display = 'none';
+		        document.getElementById('satuan_lembar').style.display = 'none';
+		        document.getElementById('satuan_pcs').style.display = 'none';
+		        document.getElementById('satuan_panjang').style.display = 'none';
+		        document.getElementById('satuan_set').style.display = 'block';
+		        document.getElementById('satuan_unit').style.display = 'block';
+		      }  
+		    }
+		</script>
+		<script>
+			var Select2 = function() {
+				var demos = function(){
+					 // basic
+			        $('.dropdown_search, .dropdown_search_validate').select2({
+			            placeholder: "Select a state"
+			        });
+				}
+				var modalDemos = function(){
+					$('#m_select2_modal').on('shown.bs.modal', function () {
+						// basic
+			            $('.dropdown_search_modal').select2({
+			                placeholder: "Select a state"
+			            });
+		            });
+				}
+				 return {
+			        init: function() {
+			            demos();
+			            modalDemos();
+			        }
+			    };
+			}();
+			//== Initialization
+			jQuery(document).ready(function() {
+			    Select2.init();
+			});
+		</script>
+		<script>
+			var SweetAlert2Demo = function() {
+			 	var initDemos = function() {
+				 	$('#send').click(function(e) {
+			            swal('SPK telah terbuat');
+			        });
+			 	};
+			 	return {
+			        //== Init
+			        init: function() {
+			            initDemos();
+			        },
+			    };
+			 }();
+			 //== Class Initialization
+			jQuery(document).ready(function() {
+			    SweetAlert2Demo.init();
+			});
+		</script>
+		<script>
+			var MONTHS = ['Bahan 1', 'Bahan 2', 'Bahan 3', 'Bahan 4', 'Bahan 5', 'Bahan 6', 'Bahan 7', 'Bahan 8', 'Bahan 9', 'Bahan 10', 'Bahan 11', 'Bahan 12'];
+			const data = [10,40,30,-29,50,-40,-40,10,20,-30,12,43];
+			const colours = data.map((value) => value < 0 ? '#C62828' : '#8BC34A');
+			var color = Chart.helpers.color;
+			var horizontalBarChartData = {
+				labels: ['Bahan 1', 'Bahan 2', 'Bahan 3', 'Bahan 4', 'Bahan 5', 'Bahan 6', 'Bahan 7', 'Bahan 8', 'Bahan 9', 'Bahan 10', 'Bahan 11', 'Bahan 12'],
+				datasets: [{
+					label: 'Jumlah Bahan',
+					backgroundColor: colours,
+					borderColor: window.chartColors.white,
+					borderWidth: 0,
+					data: data
+				}]
+			};
+			window.onload = function() {
+				var ctx = document.getElementById('bahan-baku').getContext('2d');
+				window.myHorizontalBar = new Chart(ctx, {
+					type: 'horizontalBar',
+					data: horizontalBarChartData,
+					options: {
+						// Elements options apply to all of the options unless overridden in a dataset
+						// In this case, we are setting the border of each horizontal bar to be 2px wide
+						elements: {
+							rectangle: {
+								borderWidth: 0,
+							}
+						},
+						responsive: true,
+						legend: {
+							position: 'right',
+						},
+					}
+				});
+			};
+		</script>
+	</body>
+	<!-- end::Body -->
+</html>
