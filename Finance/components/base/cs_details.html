@@ -16,7 +16,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Human Resource | Settings
+			Finance | Rincian Customer Service
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,17 +67,17 @@ License: You must have a valid license purchased only from themeforest(the above
 										<span></span>
 									</a>
 									<!-- END -->
-							<!-- BEGIN: Responsive Aside Left Menu Toggler -->
+									<!-- BEGIN: Responsive Aside Left Menu Toggler -->
 									<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
 										<span></span>
 									</a>
 									<!-- END -->
-							<!-- BEGIN: Responsive Header Menu Toggler -->
+									<!-- BEGIN: Responsive Header Menu Toggler -->
 									<a id="m_aside_header_menu_mobile_toggle" href="javascript:;" class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block">
 										<span></span>
 									</a>
 									<!-- END -->
-							<!-- BEGIN: Topbar Toggler -->
+									<!-- BEGIN: Topbar Toggler -->
 									<a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" class="m-brand__icon m--visible-tablet-and-mobile-inline-block">
 										<i class="flaticon-more"></i>
 									</a>
@@ -88,7 +88,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!-- END: Brand -->
 						<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
 							<!-- BEGIN: Horizontal Menu -->
-							<img style="display: inline; float: left; height: 70px; width: auto" src="../../../assets/demo/default/media/img/misc/human_resouce.png">
+							<img style="display: inline; float: left; height: 70px; width: auto" src="../../../assets/demo/default/media/img/misc/finance.png">
 							<!-- END: Horizontal Menu -->								
 							<!-- BEGIN: Topbar -->
 							<div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
@@ -126,7 +126,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark" data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500" >
 						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 							<!-- DASHBOARD -->
-							<li class="m-menu__item  " aria-haspopup="true" >
+							<li class="m-menu__item " aria-haspopup="true" >
 								<a  href="../../index.html" class="m-menu__link ">
 									<i class="m-menu__link-icon flaticon-line-graph"></i>
 									<span class="m-menu__link-title">
@@ -138,12 +138,65 @@ License: You must have a valid license purchased only from themeforest(the above
 									</span>
 								</a>
 							</li>
-							<!-- Karyawan -->
-							<li class="m-menu__item " aria-haspopup="true" data-menu-submenu-toggle="hover">
-								<a href="karyawan.html" class="m-menu__link m-menu__toggle">
+							
+							<!-- Pemasukan -->
+							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
+								<a href="#" class="m-menu__link m-menu__toggle">
 									<i class="m-menu__link-icon flaticon-graphic-2"></i>
 									<span class="m-menu__link-text">
-										Karyawan
+										Pemasukan
+									</span>
+									<i style="font-size: 1.5rem" class="m-menu__ver-arrow fa fa-caret-right"></i>
+								</a>
+								<div class="m-menu__submenu " style="">
+									<span class="m-menu__arrow"></span>
+									<ul class="m-menu__subnav">
+										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
+											<span class="m-menu__link">
+												<span class="m-menu__link-text">
+													Pemasukan
+												</span>
+											</span>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true">
+											<a href="belum_lunas.html" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Belum Lunas
+												</span>
+											</a>
+										</li>
+
+										<li class="m-menu__item" aria-haspopup="true">
+											<a href="total_pemasukan.html"  class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Total Pemasukan
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							 <!-- Pengeluaran -->
+							<li class="m-menu__item " aria-haspopup="true" data-menu-submenu-toggle="hover">
+								<a href="pengeluaran.html" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon flaticon-interface-1"></i>
+									<span class="m-menu__link-text">
+										Pengeluaran
+									</span>
+								</a>
+							</li>
+							 <!-- Report -->
+							<li style="display: none;" class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
+								<a href="report.html" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon flaticon-analytics"></i>
+									<span class="m-menu__link-text">
+										Report
 									</span>
 								</a>
 							</li>
@@ -157,7 +210,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</li>
 							<!-- SPK -->
-							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
+							<li class="m-menu__item m-menu__item--submenu " aria-haspopup="true" data-menu-submenu-toggle="hover">
 								<a href="#" class="m-menu__link m-menu__toggle">
 									<i class="m-menu__link-icon fa fa-file-text-o"></i>
 									<span class="m-menu__link-text">
@@ -198,16 +251,34 @@ License: You must have a valid license purchased only from themeforest(the above
 									</ul>
 								</div>
 							</li>
-							<!-- Settings -->
+							<!-- Customer Service-->
 							<li class="m-menu__item m-menu__item--active" aria-haspopup="true" data-menu-submenu-toggle="hover">
-								<a href="settings.html" class="m-menu__link m-menu__toggle">
-									<i class="m-menu__link-icon fa fa-gear"></i>
+								<a href="customer_service.html" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon flaticon-users"></i>
 									<span class="m-menu__link-text">
-										Settings
+										Customer Service
 									</span>
 								</a>
 							</li>
-						</ul>	
+	            <!-- KEHADIRAN -->
+							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
+								<a href="kehadiran.html" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-user-o"></i>
+									<span class="m-menu__link-text">
+										Kehadiran
+									</span>
+								</a>
+							</li>
+							<!-- Setting -->
+							<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
+								<a href="settings.html" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa 	fa-gears"></i>
+									<span class="m-menu__link-text">
+										Pengaturan
+									</span>
+								</a>
+							</li>
+						</ul>
 					</div>
 					<!-- END: Aside Menu -->
 				</div>
@@ -217,88 +288,121 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="m-subheader ">
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
-								<h3 class="m-subheader__title ">
-									Settings
+								<h3 class="m-subheader__title m-subheader__title--separator">
+									Customer Service
 								</h3>
+								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+									<li class="m-nav__item m-nav__item--home">
+										<a href="../../index.html" class="m-nav__link m-nav__link--icon">
+											<i class="m-nav__link-icon la la-home"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div>
+								<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
+									<span class="m-subheader__daterange-label">
+										<span class="m-subheader__daterange-title"></span>
+										<span class="m-subheader__daterange-date m--font-brand"></span>
+									</span>
+									<a href="#" class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
+										<i class="la la-angle-down"></i>
+									</a>
+								</span>
 							</div>
 						</div>
 					</div>
 					<!-- END: Subheader -->
 					<div class="m-content">
-                    	<div class="row">
-                    		<div class="col-xl-12">
-                    			<div class="m-portlet m-portlet--mobile">
-									<div class="m-portlet__head portlet_profil_color">
-										<div class="m-portlet__head-caption">
-											<div class="m-portlet__head-title">
-												<h3 style="color: white;" class="m-portlet__head-text">
-													 <i style="font-size: 1.2rem" class="fa fa-user"> </i> Profil
-												</h3>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="m-portlet m-portlet--mobile">
+									<div class="m-portlet__body">
+										<!--begin: Search Form -->
+										<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
+											<div class="row align-items-center">
+												<div class="col-md-12">
+													<div class="form-group m-form__group row align-items-center">
+														<div class="col-md-4">
+															<div class="m-portlet__head-title">
+																<h3 class="m-portlet__head-text">
+																	List Customer Service
+																</h3>
+															</div>
+														</div>
+														<div class="col-md-4 offset-md-4">
+															<div class="m-input-icon m-input-icon--left">
+																<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="generalSearch">
+																<span class="m-input-icon__icon m-input-icon__icon--left">
+																	<span>
+																		<i class="la la-search"></i>
+																	</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
+										<!--end: Search Form -->
+										<!--begin: Datatable -->
+										<!-- <div class="m_datatable" id="local_data"></div> -->
+										<table class="table" id="tbl_list_cs">
+											<thead>
+												<tr>
+													<th>No</th>
+													<th>Nama</th>
+													<th>Pemasukan Hari Ini</th>
+													<th>Aksi</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Ahmad Rifaldi</td>
+													<td>500000</td>
+													<td>
+														<a href="cs_detail.html" class="btn btn-sm btn-primary btn_rincian">Rincian</a>
+													</td>										
+												<tr>
+													<td>2</td>
+													<td>Ahmad Rifaldi</td>
+													<td>500000</td>
+													<td>
+														<a href="cs_detail.html" class="btn btn-sm btn-primary btn_rincian">Rincian</a>
+													</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>Ahmad Rifaldi</td>
+													<td >500000</td>
+													<td>
+														<a href="cs_detail.html" class="btn btn-sm btn-primary btn_rincian" >Rincian</a>
+													</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>Ahmad Rifaldi</td>
+													<td>500000</td>
+													<td>
+														<a href="cs_detail.html" class="btn btn-sm btn-primary btn_rincian" >Rincian</a>
+													</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>Ahmad Rifaldi</td>
+													<td>500000</td>
+													<td>
+														<a href="cs_detail.html" class="btn btn-sm btn-primary btn_rincian">Rincian</a>
+													</td>	
+												</tr>
+											</tbody>
+										</table>
+										<!--end: Datatable -->
 									</div>
-									<div class="m-portlet">
-										<!--begin::Form-->
-										<form class="m-form">
-											<div class="m-portlet__body">
-												<div class="m-form__section m-form__section--first">
-													<div class="form-group m-form__group">
-														<label for="example_input_full_name">
-															Nama
-														</label>
-														<input name="nama" type="text" class="form-control m-input" value="Ahmad Rifaldi">
-													</div>
-													<div class="form-group m-form__group">
-														<label for="example_input_full_name">
-															Alamat
-														</label>
-														<input name="alamat" type="text" class="form-control m-input" value="Jln. Poros Malino, BTN Griya Riski Abadi C6">
-													</div>
-													<div class="form-group m-form__group">
-														<label for="example_input_full_name">
-															Email
-														</label>
-														<input name="email" type="email" class="form-control m-input" value="aldi4rifaldi@gmail.com">
-													</div>
-													<div class="form-group m-form__group">
-														<label for="example_input_full_name">
-															No. Hp
-														</label>
-														<input name="no_hp" type="text" class="form-control m-input" value="085145322xxx">
-													</div>
-													<div class="form-group m-form__group">
-														<label for="example_input_full_name">
-															Username
-														</label>
-														<input name="username" type="text" class="form-control m-input" value="aldi4rifaldi">
-													</div>
-													<div class="form-group m-form__group">
-														<label for="example_input_full_name">
-															Password
-														</label>
-														<input type="Password" class="form-control m-input" value="xxxxxxx">
-													</div>
-													<div class="form-group m-form__group">
-														<label for="example_input_full_name">
-															Re-type Password
-														</label>
-														<input name="retype_password" type="Password" class="form-control m-input" value="xxxxxxx">
-													</div>
-												</div>
-											</div>
-											<div class="m-portlet__foot m-portlet__foot--fit">
-												<div class="m-form__actions m-form__actions">
-													<button id="submit_profil" type="reset" class="btn btn-primary">
-														Submit
-													</button>
-												</div>
-											</div>
-										</form>
-										<!--end::Form-->
-									</div>
-								</div>
-                    		</div>
-                    	</div>
+								</div>	
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -312,7 +416,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								Upa'na Studio
 							</span>
 						</div>
-						
 					</div>
 				</div>
 			</footer>
@@ -335,6 +438,73 @@ License: You must have a valid license purchased only from themeforest(the above
         <!--begin::Page Snippets -->
 		<script src="../../../assets/app/js/dashboard.js" type="text/javascript"></script>
 		<!--end::Page Snippets -->
+		<script src="../../../assets/demo/default/custom/components/datatables/base/data-local.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var tbl_list_cs = $('#tbl_list_cs').mDatatable({
+			data: {
+				saveState: {cookie: false},
+				/*type: 'remote',
+			        source: {
+			          read: {
+			            // sample GET method
+			            method: 'GET',
+			            url: 'https://keenthemes.com/metronic/preview/inc/api/datatables/demos/default.php',
+			            map: function(raw) {
+			              // sample data mapping
+			              var dataSet = raw;
+			              if (typeof raw.data !== 'undefined') {
+			                dataSet = raw.data;
+			              }
+			              return dataSet;
+			            },
+			          },
+			        },
+			        pageSize: 10,
+			        serverPaging: true,
+			        serverFiltering: true,
+			        serverSorting: true,*/
+			},
+			// layout definition
+			layout: {
+				theme: 'default', // datatable theme
+				class: '', // custom wrapper class
+				scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
+				// height: 450, // datatable's body's fixed height
+				footer: false // display/hide footer
+			},
+
+			// column sorting
+			sortable: true,
+			search: {
+				input: $('#generalSearch'),
+			},
+			columns: [
+
+				{
+					field: 'No',
+					textAlign: 'center',
+					width: 50
+				},
+				{
+					field: 'Nama',
+					textAlign: 'center',
+					type:'date',
+					width: 180
+				},
+				{
+					field: 'Pemasukan Hari Ini',
+					textAlign: 'center',
+	
+				},
+				{
+					field: 'Aksi',
+					textAlign: 'center',
+					width: 130
+				}
+
+			],
+		});
+		</script>
 	</body>
 	<!-- end::Body -->
 </html>
