@@ -1,0 +1,52 @@
+
+@page {
+    /* dimensions for the whole page */
+    size: A5 landscape;
+    
+    margin: 0;
+}
+
+html {
+    /* off-white, so body edge is visible in browser */
+    background: #eee;
+}
+
+@media print {
+    body {
+        /* A5 dimensions */
+        height: 148.5mm;
+        width: 210mm; 
+
+        margin: 0;
+    }
+}
+        
+/* fill half the height with each face */
+/* the back face */
+.face-back {
+    background: #f6f6f6;
+}
+
+/* the front face */
+.face-front {
+    background: #fff;
+}
+
+/* an image that fills the whole of the front face */
+.face-front img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+
+.m-portlet .m-portlet__body {
+    padding: .2rem 2.2rem;
+}
+
+.table {
+    min-height : 200px !important;
+}

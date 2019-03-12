@@ -40,20 +40,72 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!-- begin:: Style tambahan -->
 		<link href="../assets/demo/default/base/pelangi-style.css" rel="stylesheet" type="text/css">
+		<!-- <link href="../assets/demo/default/base/card-a5.css" rel="stylesheet" type="text/css" -->
 		<!-- end:: Style tambahan -->
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="../assets/demo/default/media/img/logo/favicon.ico" />
+		<style>
+			@media print {
+
+				.table {
+					min-height : 275px !important;
+				}
+				
+				th {
+					font-size: 1.7rem !important;
+				}
+
+				td {
+					font-size: 1.7rem !important;
+				}
+
+				p {
+					font-size: 1.8rem !important;
+				}
+				label {
+					font-size: 1.6rem !important;
+				}
+				input {
+					font-size: 1.6rem !important;
+				}
+				h3 {
+					font-size: 2rem !important;
+				}
+
+				.font-print {
+					font-size: 1.8rem !important;
+				}
+
+				.m-portlet .m-portlet__body {
+					padding: 2.2rem 2.2rem;
+				}
+
+				.informasinya {
+					padding-bottom: .1rem !important;
+				}
+
+				.col-form-label {
+					padding-top : 0px !important;
+					padding-bottom: 0px !important;
+				}
+			}
+
+			
+		</style>
 	</head>
 	<!-- end::Head -->
     <!-- end::Body -->
 	<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
 		<div class="m-content">
+			<div class="face face-front">
         	<div class="row">
 				<div class="col-xl-12">
 					<div class="m-portlet m-portlet--tab">
 						<div class="m-portlet__head header">
 							<h3 class="header-pesanan"> 
-								Invoice 
+								<!-- Invoice  -->
+								<img style="height:auto;width:250px" src="..\assets\demo\default\media\img\logo\invoice_logo.png">
+								
 							</h3><br>
 							<h3 name="no_pesanan" class="header-pesanan-no"> 
 								#123456789 
@@ -64,44 +116,38 @@ License: You must have a valid license purchased only from themeforest(the above
 								<p name="alamat" id="alamat"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
 							</div>	
 						</div>
+						<div class="m-portlet__body informasinya">
+							<div class="form-group m-form__group row">
+								<label for="example-text-input" class="col-3 col-form-label">
+									Tipe Pesanan
+								</label>
+								<div class="col-4">
+									<span class="font-print" id="tipe_pesanan"> Express </span>
+								</div>
+							</div> 
+							<div class="form-group m-form__group row">
+								<label for="example-text-input" class="col-3 col-form-label">
+									catatan 
+								</label>
+								<div class="col-4"
+									<span class="font-print" id="catatan_pesanan"> - </span>
+									<!-- <input name="catatan" class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true"> -->
+								</div>
+							</div>
+							<div class="form-group m-form__group row">
+								<label for="example-text-input" class="col-3 col-form-label">
+									Tanggal Pesanan 
+								</label>
+								<div class="col-4">
+									<span class="font-print" id="tanggal_pesanan"> 20/11/19 </span>
+									<!-- <input name="tanggal_pesanan" class="form-control m-input" type="text" value="20-11-2018" id="example-text-input" disabled="true"> -->
+								</div>
+							</div>
+						</div>
 						<!--begin::Form-->
 						<form class="m-form m-form--fit m-form--label-align-right">
-							<div class="m-portlet__body">
-								<div class="form-group m-form__group row">
-									<label for="example-text-input" class="col-2 col-form-label">
-										Tipe Pesanan 
-									</label>
-									<div class="col-4">
-										<input name="tipe_pesanan" class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
-									</div>
-								</div>
-								<div class="form-group m-form__group row">
-									<label for="example-text-input" class="col-2 col-form-label">
-										catatan 
-									</label>
-									<div class="col-4">
-										<input name="catatan" class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
-									</div>
-								</div>
-								<div class="form-group m-form__group row">
-									<label for="example-text-input" class="col-2 col-form-label">
-										Tanggal Pesanan 
-									</label>
-									<div class="col-4">
-										<input name="tanggal_pesanan" class="form-control m-input" type="text" value="20-11-2018" id="example-text-input" disabled="true">
-									</div>
-								</div>
-							    <div class="form-group m-form__group row">
-									<label for="example-text-input" class="col-2 col-form-label">
-										Order Status : 
-									</label>
-									<div class="col-4">
-										<span class="m-badge  m-badge--info m-badge--wide" style="width: 120px;">desain grafis</span>
-									</div>
-							  	</div>
-							</div>
 							<div class="m-portlet m-portlet--mobile">
-								<div class="m-portlet__body">
+								<div class="m-portlet__body tablenya">
 									<!--begin: Datatable -->
 									<!-- <div class="m_datatable" id="local_data"></div> -->
 									<table class="table" id="tbl_invoice">
@@ -113,7 +159,6 @@ License: You must have a valid license purchased only from themeforest(the above
 												<th>Finishing</th>
 												<th>Jumlah</th>
 												<th>Harga</th>
-												
 											</tr>
 										</thead>
 										<tbody>
@@ -129,7 +174,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</table>
 									<div class="m-datatable__pager m-datatable--paging-loaded clearfix">	
 										<div class="m-datatable__pager-info">
-											<div class="btn-group bootstrap-select m-datatable__pager-size" style="width: 300px; float: right;">
+											<div class="btn-group bootstrap-select m-datatable__pager-size" style="width: 500px; float: right;">
 												<p align="right"><b>Sub Total :</b> 
 													<span id="subTotal"> Rp. 120.000</span>
 												</p>
@@ -139,19 +184,15 @@ License: You must have a valid license purchased only from themeforest(the above
 												<p align="right"><b>Sisa Pembayaran :</b>
 													<span id="sisaPembayaran"> Rp. 120.000</span>
 												</p>
-												<p align="right" style="font-weight: 500; font-size: 2rem;">
+												<p align="right" style="font-weight: 500; font-size: 2.8rem !important;">
 													Rp. 120.000
 												</p>
 											</div>	
-										</div>
-										<br>
-										<br>
+										</div> 
 										<div class="container-ttd-head" >
-                                        	<p align="Center">CS Menangani</p>
+                                        	<p align="Center">Customer Service</p>
                                         </div>
-                                        <div class="container-ttd-head" style="margin-left: 30px" >
-                                        	<p align="Center">CS Pelunasan</p>
-                                        </div>
+										<br>
 										<br>
 										<br>
 										<br>
@@ -161,9 +202,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="container-ttd" >
                                         	<p name="cs_menangani" align="Center">Vega Vatima</p>
                                         </div>
-										<div class="container-ttd" style="margin-left: 30px" >
-                                        	<p name="cs_pelunasan" align="Center">Ria Amelinda</p>
-                                        </div>
 	                                </div>
 									<!--end: Datatable -->
 								</div>
@@ -171,6 +209,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</form>
 					</div>
 				</div>	
+			</div>
 			</div>
 		</div>
 	</body>
@@ -204,32 +243,33 @@ License: You must have a valid license purchased only from themeforest(the above
 				{
 					field: 'No',
 					textAlign: 'center',
-					width: 50
+					width : 50 
 				},
 				{
 					field: 'Pesanan',
 					textAlign: 'center',
-					width: 100
+					width :130
 				},
 				{
 					field: 'Ukuran',
 					textAlign: 'center',
-					width: 100
+					width:140
 				},
 				{
 					field: 'Finishing',
 					textAlign: 'center',
-					width: 100
+
 				},
 				{
 					field: 'Jumlah',
 					textAlign: 'center',
-					width: 100
+					width : 100
+					
 				},
 				{
 					field: 'Harga',
 					textAlign: 'center',
-					width: 100
+					
 				}
 
 			],

@@ -268,7 +268,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													Order Status : 
 												</label>
 												<div class="col-4">
-													<span class="m-badge  m-badge-DesignGrafis m-badge--wide">Selesai</span>
+													<span class="m-badge   m-badge--info m-badge--wide">Produksi</span>
 												</div>
 										  	</div>
 										</div>
@@ -299,11 +299,14 @@ License: You must have a valid license purchased only from themeforest(the above
 														</tr>
 													</tbody>
 												</table>
-												<div class="m-datatable__pager m-datatable--paging-loaded clearfix">	
+												<div class="m-datatable__pager m-datatable--paging-loaded clearfix">
+													<button type="button" class="btn btn-primary" data-toggle="modal" style="float:right;" data-target="#modal_selesai">
+															Selesai
+													</button>
 													<p align="left"><b>CS Menangani :</b> <span id="nama-cs-menangani">Arfandi</span></p>
 													<p align="left"><b>Designer     :</b> <span id="nama-designer">Surya Aditama</span></p>
 													<p align="left"><b>Produksi     :</b> <span id="nama-produksi">Sidik Permana</span></p>
-													<p align="left"><b>CS Pelunasan :</b> <span id="nama-cs-pelunasan">Joshua</span></p>
+													<p align="left"><b>CS Pelunasan :</b> <span id="nama-cs-pelunasan">-</span></p>
 				                                </div>
 												<!--end: Datatable -->
 											</div>
@@ -316,6 +319,300 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 			</div>
 					<!-- end:: Body -->
+			<!--begin::Modal-->
+			<div class="modal fade" id="modal_selesai" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">
+									Penggunaan Bahan
+								</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">
+										&times;
+									</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-max-height="300">
+									<div class="list-pesanan">
+										<div class="head-pesanan">
+											<label class="col-4 col-form-label">
+												<h5>Pesanan 1</h5>
+											</label>
+											<button style="float: right;" class="btn btn-secondary">
+												tambah bahan
+											</button>
+										</div>
+										<div class="list_bahan">
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-3 col-form-label">
+													Jenis Bahan
+												</label>
+												<div class="col-9">
+													<select style="width: 100%" name="jenis_bahan" class="form-control m-select2 dropdown_search" name="jenis_bahan">
+														<option value="bahan_1">
+															Bahan 1
+														</option >
+														<option value="bahan_2">
+															Bahan 2
+														</option>
+														<option value="bahan_3">
+															Bahan 3
+														</option>
+														<option value="bahan_4">
+															Bahan 4
+														</option>
+														<option value="akrilik">
+															Akrilik
+														</option>
+														<option value="silika">
+															Silika
+														</option>
+													</select>									
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-3 col-form-label">
+													Jumlah
+												</label>
+												<div class="input-group col-9">
+													<input type="text" name="jumlah_bahan_terpakai" class="form-control" aria-label="Text input with dropdown button">
+													<div class="input-group-append">
+														<select class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<option value="1">
+																Set
+															</option>
+															<option value="1">
+																Lembar
+															</option>
+															<option value="1">
+																Unit
+															</option>
+															<option value="1">
+																dll
+															</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-3 col-form-label">
+													Bahan terbuang
+												</label>
+												<div class="input-group col-9">
+													<input type="text" name="jumlah_bahan_terbuang" class="form-control" aria-label="Text input with dropdown button">
+													<div class="input-group-append">
+														<select class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<option value="1">
+																Set
+															</option>
+															<option value="1">
+																Lembar
+															</option>
+															<option value="1">
+																Unit
+															</option>
+															<option value="1">
+																dll
+															</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+							      <hr>
+									</div>
+									<div class="list-pesanan">
+										<div class="head-pesanan">
+											<label class="col-4 col-form-label">
+												<h5>Pesanan 2</h5>
+											</label>
+											<button style="float: right;" class="btn btn-secondary">
+												tambah bahan
+											</button>
+										</div>
+										<div class="list_bahan">
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-3 col-form-label">
+													Jenis Bahan
+												</label>
+												<div class="col-9">
+													<select style="width: 100%" name="jenis_bahan" class="form-control m-select2 dropdown_search" name="jenis_bahan">
+														<option value="bahan_1">
+															Bahan 1
+														</option >
+														<option value="bahan_2">
+															Bahan 2
+														</option>
+														<option value="bahan_3">
+															Bahan 3
+														</option>
+														<option value="bahan_4">
+															Bahan 4
+														</option>
+														<option value="akrilik">
+															Akrilik
+														</option>
+														<option value="silika">
+															Silika
+														</option>
+													</select>									
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-3 col-form-label">
+													Jumlah
+												</label>
+												<div class="input-group col-9">
+													<input type="text" name="jumlah_bahan_terpakai" class="form-control" aria-label="Text input with dropdown button">
+													<div class="input-group-append">
+														<select class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<option value="1">
+																Set
+															</option>
+															<option value="1">
+																Lembar
+															</option>
+															<option value="1">
+																Unit
+															</option>
+															<option value="1">
+																dll
+															</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-3 col-form-label">
+													Bahan terbuang
+												</label>
+												<div class="input-group col-9">
+													<input type="text" name="jumlah_bahan_terbuang" class="form-control" aria-label="Text input with dropdown button">
+													<div class="input-group-append">
+														<select class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<option value="1">
+																Set
+															</option>
+															<option value="1">
+																Lembar
+															</option>
+															<option value="1">
+																Unit
+															</option>
+															<option value="1">
+																dll
+															</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+									</div>
+									<div class="list-pesanan">
+										<div class="head-pesanan">
+											<label class="col-4 col-form-label">
+												<h5>Pesanan 3</h5>
+											</label>
+											<button style="float: right;" class="btn btn-secondary">
+												tambah bahan
+											</button>
+										</div>
+										<div class="list_bahan">
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-3 col-form-label">
+													Jenis Bahan
+												</label>
+												<div class="col-9">
+													<select style="width: 100%" name="jenis_bahan" class="form-control m-select2 dropdown_search" name="jenis_bahan">
+														<option value="bahan_1">
+															Bahan 1
+														</option >
+														<option value="bahan_2">
+															Bahan 2
+														</option>
+														<option value="bahan_3">
+															Bahan 3
+														</option>
+														<option value="bahan_4">
+															Bahan 4
+														</option>
+														<option value="akrilik">
+															Akrilik
+														</option>
+														<option value="silika">
+															Silika
+														</option>
+													</select>									
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-3 col-form-label">
+													Jumlah
+												</label>
+												<div class="input-group col-9">
+													<input type="text" name="jumlah_bahan_terpakai" class="form-control" aria-label="Text input with dropdown button">
+													<div class="input-group-append">
+														<select class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<option value="1">
+																Set
+															</option>
+															<option value="1">
+																Lembar
+															</option>
+															<option value="1">
+																Unit
+															</option>
+															<option value="1">
+																dll
+															</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-3 col-form-label">
+													Bahan terbuang
+												</label>
+												<div class="input-group col-9">
+													<input type="text" name="jumlah_bahan_terbuang" class="form-control" aria-label="Text input with dropdown button">
+													<div class="input-group-append">
+														<select class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<option value="1">
+																Set
+															</option>
+															<option value="1">
+																Lembar
+															</option>
+															<option value="1">
+																Unit
+															</option>
+															<option value="1">
+																dll
+															</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									Tutup
+								</button>
+								<button type="button" class="btn btn-primary" id="m_sweetalert_demo_3_3" >
+									Kirim
+								</button>
+							</div>
+						</div>
+					</div>
+			</div>
+				<!--end::Modal-->	
 					<!-- begin::Footer -->
 			<footer class="m-grid__item	m-footer ">
 				<div class="m-container m-container--fluid m-container--full-height m-page__container">
@@ -423,6 +720,61 @@ License: You must have a valid license purchased only from themeforest(the above
 
 			],
 		});
+		</script>
+		<script>
+				var Select2 = function() {
+					var demos = function(){
+						// basic
+						$('.dropdown_search, .dropdown_search_validate').select2({
+							placeholder: "Select a state"
+						});
+					}
+					var modalDemos = function(){
+						$('#m_select2_modal').on('shown.bs.modal', function () {
+							// basic
+							$('.dropdown_search_modal').select2({
+								placeholder: "Select a state"
+							});
+						});
+					}
+					return {
+						init: function() {
+							demos();
+							modalDemos();
+						}
+					};
+				}();
+				//== Initialization
+				jQuery(document).ready(function() {
+					Select2.init();
+				});
+		</script>
+		<script>
+			//== Class definition
+			var SweetAlert2Demo = function() {
+
+			//== Demos
+			var initDemos = function() {
+					
+					$('#m_sweetalert_demo_3_3').click(function(e) {
+							swal("Good job!", "You clicked the button!", "success");
+					});
+
+				
+			};
+
+			return {
+					//== Init
+					init: function() {
+							initDemos();
+					},
+			};
+			}();
+
+			//== Class Initialization
+			jQuery(document).ready(function() {
+			SweetAlert2Demo.init();
+			});
 		</script>
 	</body>
 	<!-- end::Body -->

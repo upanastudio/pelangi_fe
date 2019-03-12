@@ -570,7 +570,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">
 									Close
 								</button>
-								<button type="button" class="btn btn-primary">
+								<button type="button" class="btn btn-primary" id="m_submit">
 									Submit
 								</button>
 							</div>
@@ -703,6 +703,32 @@ License: You must have a valid license purchased only from themeforest(the above
 			    Select2.init();
 			});
 		</script>
+
+	<script>
+		//== Class definition
+		var SweetAlert2Demo = function() {
+
+		//== Demos
+		var initDemos = function() {
+				
+				$('#m_submit').click(function(e) {
+						swal("SPK Selesai!", "SPK telah selesai", "success");
+				});
+		};
+
+		return {
+				//== Init
+				init: function() {
+						initDemos();
+				},
+		};
+		}();
+
+		//== Class Initialization
+		jQuery(document).ready(function() {
+		SweetAlert2Demo.init();
+		});
+	</script>
 	</body>
 	<!-- end::Body -->
 </html>

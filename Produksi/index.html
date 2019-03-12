@@ -292,7 +292,9 @@ License: You must have a valid license purchased only from themeforest(the above
 													<td>Spanduk</td>
 													<td>1.5 x 1 m</td>
 													<td>
-														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+															<button type="button" class="btn-terima btn_terima_produksi" data-toggle="modal">
+																	Terima
+															</button>
 													</td>											
 												<tr>
 													<td>2</td>
@@ -302,7 +304,9 @@ License: You must have a valid license purchased only from themeforest(the above
 													<td>Spanduk</td>
 													<td>1.5 x 1 m</td>
 													<td>
-														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+															<button type="button" class="btn-terima btn_terima_produksi" data-toggle="modal">
+																	Terima
+															</button>
 													</td>	
 												</tr>
 												<tr>
@@ -313,7 +317,9 @@ License: You must have a valid license purchased only from themeforest(the above
 													<td>Spanduk</td>
 													<td>1.5 x 1 m</td>
 													<td>
-														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+															<button type="button" class="btn-terima btn_terima_produksi" data-toggle="modal">
+																	Terima
+															</button>
 													</td>	
 												</tr>
 												<tr>
@@ -324,7 +330,9 @@ License: You must have a valid license purchased only from themeforest(the above
 													<td>Spanduk</td>
 													<td>1.5 x 1 m</td>
 													<td>
-														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+															<button type="button" class="btn-terima btn_terima_produksi" data-toggle="modal">
+																	Terima
+															</button>
 													</td>	
 												</tr>
 												<tr>
@@ -335,7 +343,9 @@ License: You must have a valid license purchased only from themeforest(the above
 													<td>Spanduk</td>
 													<td>1.5 x 1 m</td>
 													<td>
-														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+															<button type="button" class="btn-terima btn_terima_produksi" data-toggle="modal">
+																	Terima
+															</button>
 													</td>	
 												</tr>
 											</tbody>
@@ -343,8 +353,8 @@ License: You must have a valid license purchased only from themeforest(the above
 										<!--end: Datatable -->
 									</div>
 								</div>	
-	                    	</div>
-                    	</div>		
+							</div>
+						</div>		
 					</div>
 				</div>
 			</div>
@@ -468,6 +478,24 @@ License: You must have a valid license purchased only from themeforest(the above
 			],
 		});
 		</script>
+		<script>
+				$('.btn_terima_produksi').click(function(e) {
+						 swal({
+								 title: 'Apakah anda yakin ingin mengerjakan SPK ini ?',
+								 type: 'warning',
+								 showCancelButton: true,
+								 confirmButtonText: 'Ya'
+						 }).then(function(result) {
+								 if (result.value) {
+										 swal(
+												 'Berhasil!',
+												 'SPK dipindahkan ke Pekerjaan',
+												 'success'
+										 )
+								 }
+						 });
+				 });
+	 </script>
 	</body>
 	<!-- end::Body -->
 </html>
