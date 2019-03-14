@@ -43,6 +43,12 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- end:: Style tambahan -->
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="../../../assets/demo/default/media/img/logo/favicon.ico" />
+		<style>
+			.badge-size {
+				font-size: 1rem !important;
+				padding: 5px 15px !important;
+			}
+		</style>
 	</head>
 	<!-- end::Head -->
     <!-- end::Body -->
@@ -87,12 +93,9 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 						<!-- END: Brand -->
 						<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
+							<img style="display: inline; float: left; height: 70px; width: auto" src="../../../assets/demo/default/media/img/misc/desain_grafis2.png">
 							<!-- BEGIN: Horizontal Menu -->
-							<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
-								<ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
-									<h3 class="m-akun-title">Desain Grafis</h3>
-								</ul>
-							</div>
+							
 							<!-- END: Horizontal Menu -->								
 							<!-- BEGIN: Topbar -->
 							<div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
@@ -183,17 +186,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									SPK
 								</h3>
 							</div>
-							<div>
-								<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
-									<span class="m-subheader__daterange-label">
-										<span class="m-subheader__daterange-title"></span>
-										<span class="m-subheader__daterange-date m--font-brand"></span>
-									</span>
-									<a href="#" class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
-										<i class="la la-angle-down"></i>
-									</a>
-								</span>
-							</div>
 						</div>
 					</div>
 					<!-- END: Subheader -->
@@ -202,7 +194,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="col-xl-12">
 								<div class="m-portlet m-portlet--tab">
 									<div class="m-portlet__head header">
-										<br>
+										<h3 class="header-pesanan"> 
+											SPK
+										</h3><br>
 										<h3 class="header-pesanan-no"> 
 											#123456789 
 										</h3><br><br>
@@ -210,9 +204,10 @@ License: You must have a valid license purchased only from themeforest(the above
 											Print
 										</button>
 										<div class="info">
-											<p name="nama_pelanggan" id="namaPelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p> 
-											<p name="no_telpon" id="noTelpon"><i class="fa fa-phone"> </i> 085-145-322-137</p> 
-											<p name="alamat" id="alamat"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
+											<p id="nama_pelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p> 
+											<p id="no_telpon"><i class="fa fa-phone"> </i> 085-145-322-137</p>
+											<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
+											<p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
 										</div>		
 									</div>
 									<!--begin::Form-->
@@ -223,7 +218,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													Tipe Pesanan 
 												</label>
 												<div class="col-4">
-													<input class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
+													<input name="tipe_pesanan" class="form-control m-input" type="text" value="Express" disabled="true">
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -231,7 +226,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													catatan 
 												</label>
 												<div class="col-4">
-													<input class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
+													<input name="catatan_pesanan" class="form-control m-input" type="text" value="Express" disabled="true">
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -239,66 +234,104 @@ License: You must have a valid license purchased only from themeforest(the above
 													Tanggal Pesanan 
 												</label>
 												<div class="col-4">
-													<input class="form-control m-input" type="text" value="20-11-2018" id="example-text-input" disabled="true">
+													<input name="tanggal_pesanan" class="form-control m-input" type="text" value="20-11-2018" disabled="true">
 												</div>
 											</div>
-										    <div class="form-group m-form__group row">
+											<div class="form-group m-form__group row">
 												<label for="example-text-input" class="col-2 col-form-label">
 													Order Status : 
 												</label>
 												<div class="col-4">
-													<span class="m-badge  m-badge-DesignGrafis m-badge--wide">Desain Grafis</span>
+													<span id="order_status" class="m-badge  m-badge--primary m-badge--wide badge-size">Desain Grafis</span>
 												</div>
-										  	</div>
+											</div>
 										</div>
 										<div class="m-portlet m-portlet--mobile">
 											<div class="m-portlet__body">
 												<!--begin: Datatable -->
 												<!-- <div class="m_datatable" id="local_data"></div> -->
-												<table class="table" id="tbl_detail_spk_desain">
+												<table class="table" id="tbl_detail_spk">
 													<thead>
 														<tr>
 															<th>No</th>
-															<th>Pesanan</th>
+															<th>Nama File</th>
+															<th>Produk</th>
 															<th>Ukuran</th>
 															<th>Finishing</th>
 															<th>Jumlah</th>
 															<th>Harga</th>
-															
 														</tr>
 													</thead>
 													<tbody>
 														<tr>
 															<td>1</td>
-															<td>Spanduk</td>
-															<td>160 x 60 cm</td>
-															<td>Cincin</td>
-															<td>320</td>
-															<td>Rp. 120.000</td>
+															<td>kartunama bagus</td>
+															<td>Kartu nama kingstruk 260 1 sisi</td>
+															<td>-</td>
+															<td>Doff</td>
+															<td>2 box</td>
+															<td>Rp. 150.000</td>
+														</tr>
+														<tr>
+															<td>2</td>
+															<td>spanduk hore</td>
+															<td>Spanduk Korea</td>
+															<td>1.6 x 0.6 m</td>
+															<td>Cincin 4 buah</td>
+															<td>3 lembar</td>
+															<td>Rp. 175.000</td>
 														</tr>
 													</tbody>
 												</table>
 												<div class="m-datatable__pager m-datatable--paging-loaded clearfix">
-													<button type="button" class="btn-use btn_selesai" id="btn_selesai_desain" style="float: right;">
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>CS Menangani :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_cs_menangani">Ahmad Rifaldi</p>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>Designer :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_designer">Surya Aditama</p>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>Produksi :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_produksi">-</p>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>CS Pelunasan :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_cs_pelunasan">-</p>
+														</div>
+													</div>
+													<button type="button" class="btn-use btn-primary btn_selesai" id="btn_selesai_desain" style="float: right;">
 														Selesai
-													</button>	
-													<p align="left"><b>CS Menangani :</b> <span id="nama-cs-menangani">Arfandi</span></p>
-													<p align="left"><b>Designer     :</b> <span id="nama-designer">Surya Aditama</span></p>
-													<p align="left"><b>Produksi     :</b> <span id="nama-produksi">-</span></p>
-													<p align="left"><b>CS Pelunasan :</b> <span id="nama-cs-pelunasan">-</span></p>
-				                                </div>
+													</button>
+												</div>
 												<!--end: Datatable -->
 											</div>
 										</div>
 									</form>
 								</div>
-							</div>	
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-					<!-- end:: Body -->
-					<!-- begin::Footer -->
+			<!-- end:: Body -->
+			<!-- begin::Footer -->
 			<footer class="m-grid__item	m-footer ">
 				<div class="m-container m-container--fluid m-container--full-height m-page__container">
 					<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
@@ -330,7 +363,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<script src="../../../assets/app/js/dashboard.js" type="text/javascript"></script>
 			<!--end::Page Snippets -->
 			<script type="text/javascript">
-			var tbl_detail_spk_desain = $('#tbl_detail_spk_desain').mDatatable({
+				var tbl_detail_spk = $('#tbl_detail_spk').mDatatable({
 			data: {
 				saveState: {cookie: false},
 				/*type: 'remote',
@@ -375,10 +408,15 @@ License: You must have a valid license purchased only from themeforest(the above
 				{
 					field: 'No',
 					textAlign: 'center',
-					width: 50
+					width: 100
 				},
 				{
-					field: 'Pesanan',
+					field: 'Nama File',
+					textAlign: 'center',
+					width: 100
+				},
+				{
+					field: 'Produk',
 					textAlign: 'center',
 					width: 100
 				},

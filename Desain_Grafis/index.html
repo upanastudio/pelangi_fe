@@ -199,7 +199,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="m-portlet__head-caption">
 												<div class="m-portlet__head-title">
 													<h3 class="m-portlet__head-text">
-														Jumlah verifikasi
+														Jumlah SPK Selesai
 													</h3>
 												</div>
 											</div>
@@ -251,91 +251,66 @@ License: You must have a valid license purchased only from themeforest(the above
 										<!--end: Search Form -->
 										<!--begin: Datatable -->
 										<!-- <div class="m_datatable" id="local_data"></div> -->
-										<table class="table" id="tbl_pesanan_desainGrafis">
+										<table class="table" id="tbl_spk_desainGrafis">
 											<thead>
 												<tr>
 													<th>No</th>
-													<th>Waktu Pemesanan</th>
-													<th>No Pesanan</th>
-													<th>Tipe Pesanan</th>
-													<th>Ukuran</th>
+													<th>Tanggal</th>
+													<th>No SPK</th>
+													<th>Nama Pelanggan</th>
+													<th>No Telpon</th>
 													<th>Aksi</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>13.00,20/19/2018</td>
-													<td>#14253617</td>
-													<td>Spanduk</td>
-													<td>160 x 60 cm</td>
+													<td>20/11/2018</td>
+													<td>201195002</td>
+													<td>Ibu Sumiati</td>
+													<td>085145322137</td>
 													<td>
-														<button type="button" class="btn-terima" data-toggle="modal" data-target="#m_modal_terima">
-															Terima
-														</button>
-														<button type="button" class="btn-desain-tolak" data-toggle="modal" data-target="#m_modal_pending">
-															Pending
-														</button>
+														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
 													</td>
-												</tr>
+												</tr>	
 												<tr>
 													<td>2</td>
-													<td>13.00,20/19/2018</td>
-													<td>#14253617</td>
-													<td>Spanduk</td>
-													<td>160 x 60 cm</td>
+													<td>10/11/2018</td>
+													<td>101195002</td>
+													<td>Upana Studio</td>
+													<td>082123456432</td>
 													<td>
-														<button type="button" class="btn-terima" data-toggle="modal" data-target="#m_modal_terima">
-															Terima
-														</button>
-														<button type="button" class="btn-desain-tolak" data-toggle="modal" data-target="#m_modal_pending">
-															Pending
-														</button>
+														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
 													</td>
 												</tr>
 												<tr>
 													<td>3</td>
-													<td>13.00,20/19/2018</td>
-													<td>#14253617</td>
-													<td>Spanduk</td>
-													<td>160 x 60 cm</td>
+													<td>09/10/2018</td>
+													<td>091018002</td>
+													<td>Pak Teddy</td>
+													<td>0812347990123</td>
 													<td>
-														<button type="button" class="btn-terima" data-toggle="modal" data-target="#m_modal_terima">
-															Terima
-														</button>
-														<button type="button" class="btn-desain-tolak" data-toggle="modal" data-target="#m_modal_pending">
-															Pending
-														</button>
+														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
 													</td>
 												</tr>
 												<tr>
 													<td>4</td>
-													<td>13.00,20/19/2018</td>
-													<td>#14253617</td>
-													<td>Spanduk</td>
-													<td>160 x 60 cm</td>
+													<td>05/11/2019</td>
+													<td>051119002</td>
+													<td>Pak Samsul</td>
+													<td>085321123223</td>
 													<td>
-														<button type="button" class="btn-terima" data-toggle="modal" data-target="#m_modal_terima">
-															Terima
-														</button>
-														<button type="button" class="btn-desain-tolak" data-toggle="modal" data-target="#m_modal_pending">
-															Pending
-														</button>
+														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
 													</td>
 												</tr>
 												<tr>
 													<td>5</td>
-													<td>13.00,20/19/2018</td>
-													<td>#14253617</td>
-													<td>Spanduk</td>
-													<td>160 x 60 cm</td>
+													<td>09/10/2018</td>
+													<td>091018005</td>
+													<td>Pak Handoko</td>
+													<td>085234749519</td>
 													<td>
-														<button type="button" class="btn-desain-terima" data-toggle="modal" data-target="#m_modal_terima">
-															Terima
-														</button>
-														<button type="button" class="btn-desain-tolak" data-toggle="modal" data-target="#m_modal_pending">
-															Pending
-														</button>
+														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
 													</td>
 												</tr>
 											</tbody>
@@ -461,7 +436,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
 		<!--end::Page Snippets -->
 		<script type="text/javascript">
-			var tbl_pesanan_desainGrafis = $('#tbl_pesanan_desainGrafis').mDatatable({
+			var tbl_spk_desainGrafis = $('#tbl_spk_desainGrafis').mDatatable({
 			data: {
 				saveState: {cookie: false},
 				/*type: 'remote',
@@ -504,34 +479,38 @@ License: You must have a valid license purchased only from themeforest(the above
 				{
 					field: 'No',
 					textAlign: 'center',
-					width: 50
+					
 				},
 				{
-					field: 'Waktu Pemesanan',
+					field: 'Tanggal',
 					textAlign: 'center',
 					type:'date',
-					width: 150
+					
 				},
 				{
-					field: 'No Pesanan',
+					field: 'No SPK',
 					textAlign: 'center',
-					width: 130
+	
 				},
 				{
-					field: 'Tipe Pesanan',
-					textAlign: 'center',
-					width: 100
-				},
-				{
-					field: 'Ukuran',
+					field: 'Nama Pelanggan',
 					textAlign: 'center',
 					
 				},
+				{
+					field: 'No Telpon',
+					textAlign: 'center',
 				
+				},
+				{
+					field: 'Status',
+					textAlign: 'center',
+				
+				},
 				{
 					field: 'Aksi',
 					textAlign: 'center',
-					width: 150
+					
 				}
 
 			],

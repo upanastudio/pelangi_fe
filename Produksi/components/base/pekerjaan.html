@@ -245,78 +245,89 @@ License: You must have a valid license purchased only from themeforest(the above
 										<!-- <div class="m_datatable" id="local_data"></div> -->
 										<table class="table" id="tbl_spk_produksi">
 											<thead>
-												<tr>
-													<th>No</th>
-													<th>Waktu Pemesanan</th>
-													<th>No Pesanan</th>
-													<th>Nama File</th>
-													<th>Tipe Pesanan</th>
-													<th>Ukuran</th>
-													<th>Aksi</th>
-												</tr>
+											<tr>
+												<th>No</th>
+												<th>Tanggal</th>
+												<th>No SPK</th>
+												<th>Nama Pelanggan</th>
+												<th>No Telpon</th>
+												<th>Status</th>
+												<th>Aksi</th>
+											</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>16.10, 20/19/2018</td>
-													<td>1384910</td>
-													<td>Spanduk Pengabdian</td>
-													<td>Spanduk</td>
-													<td>1.5 x 1 m</td>
+													<td>20/11/2018</td>
+													<td>201195002</td>
+													<td>Ibu Sumiati</td>
+													<td>085145322137</td>
+													<td>
+														<span class="m-badge m-badge--success m-badge--wide" style="width: 100px;">Selesai</span>
+													</td>
 													<td>
 														<a href="pekerjaan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>											
+													</td>
+												</tr>
 												<tr>
 													<td>2</td>
-													<td>16.10, 20/19/2018</td>
-													<td>1384910</td>
-													<td>Spanduk Pengabdian</td>
-													<td>Spanduk</td>
-													<td>1.5 x 1 m</td>
+													<td>10/11/2018</td>
+													<td>101195002</td>
+													<td>Upana Studio</td>
+													<td>082123456432</td>
+													<td>
+														<span class="m-badge m-badge--primary m-badge--wide" style="width: 100px;">Desain Grafis</span>
+													</td>
 													<td>
 														<a href="pekerjaan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>	
+													</td>
 												</tr>
 												<tr>
 													<td>3</td>
-													<td>16.10, 20/19/2018</td>
-													<td>1384910</td>
-													<td>Spanduk Pengabdian</td>
-													<td>Spanduk</td>
-													<td>1.5 x 1 m</td>
+													<td>09/10/2018</td>
+													<td>091018002</td>
+													<td>Pak Teddy</td>
+													<td>0812347990123</td>
+													<td>
+														<span class="m-badge m-badge--warning m-badge--wide" style="width: 100px;">Produksi</span>
+													</td>
 													<td>
 														<a href="pekerjaan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>	
+													</td>
 												</tr>
 												<tr>
 													<td>4</td>
-													<td>16.10, 20/19/2018</td>
-													<td>1384910</td>
-													<td>Spanduk Pengabdian</td>
-													<td>Spanduk</td>
-													<td>1.5 x 1 m</td>
+													<td>05/11/2019</td>
+													<td>051119002</td>
+													<td>Pak Samsul</td>
+													<td>085321123223</td>
+													<td>
+														<span class="m-badge m-badge--success m-badge--wide" style="width: 100px;">Selesai</span>
+													</td>
 													<td>
 														<a href="pekerjaan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>	
+													</td>
 												</tr>
 												<tr>
 													<td>5</td>
-													<td>16.10, 20/19/2018</td>
-													<td>1384910</td>
-													<td>Spanduk Pengabdian</td>
-													<td>Spanduk</td>
-													<td>1.5 x 1 m</td>
+													<td>09/10/2018</td>
+													<td>091018005</td>
+													<td>Pak Handoko</td>
+													<td>085234749519</td>
+													<td>
+														<span class="m-badge m-badge--warning m-badge--wide" style="width: 100px;">Produksi</span>
+													</td>
 													<td>
 														<a href="pekerjaan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
-													</td>	
+													</td>
 												</tr>
 											</tbody>
 										</table>
 										<!--end: Datatable -->
 									</div>
 								</div>	
-	                    	</div>
-                    	</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -330,7 +341,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								Upa'na Studio
 							</span>
 						</div>
-						
 					</div>
 				</div>
 			</footer>
@@ -401,35 +411,30 @@ License: You must have a valid license purchased only from themeforest(the above
 					
 				},
 				{
-					field: 'Waktu Pemesanan',
+					field: 'Tanggal',
 					textAlign: 'center',
 					type:'date',
 					
 				},
 				{
-					field: 'No Pesanan',
+					field: 'No SPK',
 					textAlign: 'center',
-	
+
 				},
 				{
-					field: 'Nama File',
-					textAlign: 'center',
-	
-				},
-				{
-					field: 'Tipe Pesanan',
+					field: 'Nama Pelanggan',
 					textAlign: 'center',
 					
 				},
 				{
-					field: 'Ukuran',
+					field: 'No Telpon',
 					textAlign: 'center',
-					
+
 				},
 				{
 					field: 'Status',
 					textAlign: 'center',
-					
+
 				},
 				{
 					field: 'Aksi',
@@ -437,7 +442,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					
 				}
 
-			],
+				],
 		});
 		</script>
 	</body>

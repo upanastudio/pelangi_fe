@@ -43,6 +43,12 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- end:: Style tambahan -->
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="../../../assets/demo/default/media/img/logo/favicon.ico" />
+		<style>
+			.badge-size {
+				font-size: 1rem !important;
+				padding: 5px 15px !important;
+			}
+		</style>
 	</head>
 	<!-- end::Head -->
     <!-- end::Body -->
@@ -192,107 +198,152 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 					<!-- END: Subheader -->
 					<div class="m-content">
-                    	<div class="row">
+           				 <div class="row">
 							<div class="col-xl-12">
 								<div class="m-portlet m-portlet--tab">
-									<div class="m-portlet__head header">
-										<br>
-										<h3 class="header-pesanan-no"> 
-											#123456789 
-										</h3><br><br>
-										<button onclick="window.print();return false;">
-											Print
-										</button>
-										<div class="info">
-											<p name="nama_pelanggan" id="namaPelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p> 
-											<p name="no_telpon" id="noTelpon"><i class="fa fa-phone"> </i> 085-145-322-137</p> 
-											<p name="alamat" id="alamat"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
-										</div>	
-									</div>
-									<!--begin::Form-->
-									<form class="m-form m-form--fit m-form--label-align-right">
-										<div class="m-portlet__body">
-											<div class="form-group m-form__group row">
-												<label for="example-text-input" class="col-2 col-form-label">
-													Tipe Pesanan 
-												</label>
-												<div class="col-4">
-													<input class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
-												</div>
-											</div>
-											<div class="form-group m-form__group row">
-												<label for="example-text-input" class="col-2 col-form-label">
-													catatan 
-												</label>
-												<div class="col-4">
-													<input class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
-												</div>
-											</div>
-											<div class="form-group m-form__group row">
-												<label for="example-text-input" class="col-2 col-form-label">
-													Tanggal Pesanan 
-												</label>
-												<div class="col-4">
-													<input class="form-control m-input" type="text" value="20-11-2018" id="example-text-input" disabled="true">
-												</div>
-											</div>
-										    <div class="form-group m-form__group row">
-												<label for="example-text-input" class="col-2 col-form-label">
-													Order Status : 
-												</label>
-												<div class="col-4">
-													<span class="m-badge  m-badge--warning m-badge--wide" style="font-size: 1rem;">Produksi</span>
-												</div>
-										  	</div>
+										<div class="m-portlet__head header">
+											<h3 class="header-pesanan"> 
+												SPK
+											</h3><br>
+											<h3 class="header-pesanan-no"> 
+												#123456789 
+											</h3><br><br>
+											<button onclick="window.print();return false;">
+												Print
+											</button>
+											<div class="info">
+												<p id="nama_pelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p> 
+												<p id="no_telpon"><i class="fa fa-phone"> </i> 085-145-322-137</p>
+												<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
+												<p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
+											</div>		
 										</div>
-										<div class="m-portlet m-portlet--mobile">
-											<div class="m-portlet__body">
-												<!--begin: Datatable -->
-												<!-- <div class="m_datatable" id="local_data"></div> -->
-												<table class="table" id="tbl_detail_spk_desain">
-													<thead>
-														<tr>
-															<th>No</th>
-															<th>Pesanan</th>
-															<th>Ukuran</th>
-															<th>Finishing</th>
-															<th>Jumlah</th>
-															<th>Harga</th>
-															
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>1</td>
-															<td>Spanduk</td>
-															<td>160 x 60 cm</td>
-															<td>Cincin</td>
-															<td>320</td>
-															<td>Rp. 120.000</td>
-														</tr>
-													</tbody>
-												</table>
-												<div class="m-datatable__pager m-datatable--paging-loaded clearfix">
-													<button type="button" class="btn btn-primary" data-toggle="modal" style="float:right;" data-target="#modal_selesai">
-														Selesai
-													</button>
-													<p align="left"><b>CS Menangani :</b> <span id="nama-cs-menangani">Arfandi</span></p>
-													<p align="left"><b>Designer     :</b> <span id="nama-designer">Surya Aditama</span></p>
-													<p align="left"><b>Produksi     :</b> <span id="nama-produksi">Sidik Permana</span></p>
-													<p align="left"><b>CS Pelunasan :</b> <span id="nama-cs-pelunasan">Joshua</span></p>
-				                                </div>
-												<!--end: Datatable -->
-											</div>
-										</div>
-									</form>
+										<!--begin::Form-->
+										<form class="m-form m-form--fit m-form--label-align-right">
+												<div class="m-portlet__body">
+													<div class="form-group m-form__group row">
+														<label for="example-text-input" class="col-2 col-form-label">
+															Tipe Pesanan 
+														</label>
+														<div class="col-4">
+															<input name="tipe_pesanan" class="form-control m-input" type="text" value="Express" disabled="true">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label for="example-text-input" class="col-2 col-form-label">
+															catatan 
+														</label>
+														<div class="col-4">
+															<input name="catatan_pesanan" class="form-control m-input" type="text" value="Express" disabled="true">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label for="example-text-input" class="col-2 col-form-label">
+															Tanggal Pesanan 
+														</label>
+														<div class="col-4">
+															<input name="tanggal_pesanan" class="form-control m-input" type="text" value="20-11-2018" disabled="true">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label for="example-text-input" class="col-2 col-form-label">
+																Order Status : 
+														</label>
+														<div class="col-4">
+															<span id="order_status" class="m-badge  m-badge--primary m-badge--wide badge-size">Desain Grafis</span>
+														</div>
+													</div>
+												</div>
+												<div class="m-portlet m-portlet--mobile">
+														<div class="m-portlet__body">
+															<!--begin: Datatable -->
+															<!-- <div class="m_datatable" id="local_data"></div> -->
+															<table class="table" id="tbl_detail_spk">
+																<thead>
+																	<tr>
+																		<th>No</th>
+																		<th>Nama File</th>
+																		<th>Produk</th>
+																		<th>Ukuran</th>
+																		<th>Finishing</th>
+																		<th>Jumlah</th>
+																		<th>Harga</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>1.</td>
+																		<td>Kartunama bagus</td>
+																		<td>Kartu nama kingstruk 260 1 sisi</td>
+																		<td>-</td>
+																		<td>Doff</td>
+																		<td>2 box</td>
+																		<td>Rp. 150.000</td>
+																	</tr>
+																	<tr>
+																		<td>2.</td>
+																		<td>Spanduk bagus</td>
+																		<td>Spanduk Korea</td>
+																		<td>1.6 x 0.6 m</td>
+																		<td>Cincin 4 buah</td>
+																		<td>3 lembar</td>
+																		<td>Rp. 175.000</td>
+																	</tr>
+																</tbody>
+																</table>
+																<div class="m-datatable__pager m-datatable--paging-loaded clearfix">
+																	<div class="form-group m-form__group row">
+																		<label class="col-2">
+																			<b>CS Menangani :</b>
+																		</label>
+																		<div class="col-4">
+																			<p id="nama_cs_menangani">Ahmad Rifaldi</p>
+																		</div>
+																	</div>
+																	<div class="form-group m-form__group row">
+																		<label class="col-2">
+																			<b>Designer :</b>
+																		</label>
+																		<div class="col-4">
+																			<p id="nama_designer">Surya Aditama</p>
+																		</div>
+																	</div>
+																	<div class="form-group m-form__group row">
+																		<label class="col-2">
+																			<b>Produksi :</b>
+																		</label>
+																		<div class="col-4">
+																			<p id="nama_produksi">-</p>
+																		</div>
+																	</div>
+																	<div class="form-group m-form__group row">
+																		<label class="col-2">
+																			<b>CS Pelunasan :</b>
+																		</label>
+																		<div class="col-4">
+																			<p id="nama_cs_pelunasan">-</p>
+																		</div>
+																	</div>
+																	<div class="m-datatable__pager-info">
+																			<div class="btn-group bootstrap-select m-datatable__pager-size" style="width: 300px; float: right;">
+																					<button type="button" class="btn btn-primary m-btn m-btn--custom" id="btn_terima" style="float: right;">
+																							Terima
+																					</button>
+																			</div>
+																	</div>
+																</div>
+																<!--end: Datatable -->
+														</div>
+												</div>
+										</form>
 								</div>
-							</div>	
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-					<!-- end:: Body -->
-					<!-- begin::Footer -->
+			<!-- end:: Body -->
+			<!-- begin::Footer -->
 			<footer class="m-grid__item	m-footer ">
 				<div class="m-container m-container--fluid m-container--full-height m-page__container">
 					<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
@@ -598,29 +649,29 @@ License: You must have a valid license purchased only from themeforest(the above
 	        <!--begin::Page Snippets -->
 			<!--end::Page Snippets -->
 			<script type="text/javascript">
-				var tbl_detail_spk_desain = $('#tbl_detail_spk_desain').mDatatable({
+				var tbl_detail_spk = $('#tbl_detail_spk').mDatatable({
 				data: {
 					saveState: {cookie: false},
 					/*type: 'remote',
-			        source: {
-			          read: {
-			            // sample GET method
-			            method: 'GET',
-			            url: 'https://keenthemes.com/metronic/preview/inc/api/datatables/demos/default.php',
-			            map: function(raw) {
-			              // sample data mapping
-			              var dataSet = raw;
-			              if (typeof raw.data !== 'undefined') {
-			                dataSet = raw.data;
-			              }
-			              return dataSet;
-			            },
-			          },
-			        },
-			        pageSize: 10,
-			        serverPaging: true,
-			        serverFiltering: true,
-			        serverSorting: true,*/
+								source: {
+									read: {
+										// sample GET method
+										method: 'GET',
+										url: 'https://keenthemes.com/metronic/preview/inc/api/datatables/demos/default.php',
+										map: function(raw) {
+											// sample data mapping
+											var dataSet = raw;
+											if (typeof raw.data !== 'undefined') {
+												dataSet = raw.data;
+											}
+											return dataSet;
+										},
+									},
+								},
+								pageSize: 10,
+								serverPaging: true,
+								serverFiltering: true,
+								serverSorting: true,*/
 				},
 				// layout definition
 				layout: {
@@ -631,7 +682,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					footer: false, // display/hide footer
 				
 				},
-
+	
 				// column sorting
 				sortable: false,
 				pagination: false,
@@ -646,7 +697,12 @@ License: You must have a valid license purchased only from themeforest(the above
 						width: 50
 					},
 					{
-						field: 'Pesanan',
+						field: 'Nama File',
+						textAlign: 'center',
+						width: 100
+					},
+					{
+						field: 'Produk',
 						textAlign: 'center',
 						width: 100
 					},
@@ -670,39 +726,39 @@ License: You must have a valid license purchased only from themeforest(the above
 						textAlign: 'center',
 						width: 100
 					}
-
+	
 				],
-				});
+			});
 			</script>
 
 			<script>
-			var Select2 = function() {
-				var demos = function(){
-					 // basic
-			        $('.dropdown_search, .dropdown_search_validate').select2({
-			            placeholder: "Select a state"
-			        });
-				}
-				var modalDemos = function(){
-					$('#m_select2_modal').on('shown.bs.modal', function () {
+				var Select2 = function() {
+					var demos = function(){
 						// basic
-			            $('.dropdown_search_modal').select2({
-			                placeholder: "Select a state"
-			            });
-		            });
-				}
-				 return {
-			        init: function() {
-			            demos();
-			            modalDemos();
-			        }
-			    };
-			}();
-			//== Initialization
-			jQuery(document).ready(function() {
-			    Select2.init();
-			});
-		</script>
+						$('.dropdown_search, .dropdown_search_validate').select2({
+							placeholder: "Select a state"
+						});
+					}
+					var modalDemos = function(){
+						$('#m_select2_modal').on('shown.bs.modal', function () {
+							// basic
+							$('.dropdown_search_modal').select2({
+								placeholder: "Select a state"
+							});
+						});
+					}
+					return {
+						init: function() {
+							demos();
+							modalDemos();
+						}
+					};
+				}();
+				//== Initialization
+				jQuery(document).ready(function() {
+					Select2.init();
+				});
+			</script>
 
 	<script>
 		//== Class definition
@@ -728,6 +784,25 @@ License: You must have a valid license purchased only from themeforest(the above
 		jQuery(document).ready(function() {
 		SweetAlert2Demo.init();
 		});
+	</script>
+
+	<script>
+			$('#btn_terima').click(function(e) {
+					swal({
+							title: 'Apakah anda yakin ingin mengerjakan SPK ini ?',
+							type: 'warning',
+							showCancelButton: true,
+							confirmButtonText: 'Ya'
+					}).then(function(result) {
+							if (result.value) {
+									swal(
+											'Berhasil!',
+											'SPK dipindahkan ke Pekerjaan',
+											'success'
+									)
+							}
+					});
+			});
 	</script>
 	</body>
 	<!-- end::Body -->

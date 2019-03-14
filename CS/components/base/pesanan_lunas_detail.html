@@ -298,9 +298,10 @@ License: You must have a valid license purchased only from themeforest(the above
 											Print
 										</button>
 										<div class="info">
-											<p name="nama_pelanggan" id="namaPelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p> 
-											<p name="no_telpon" id="noTelpon"><i class="fa fa-phone"> </i> 085-145-322-137</p> 
-											<p name="alamat" id="alamat"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
+											<p id="nama_pelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p> 
+											<p id="no_telpon"><i class="fa fa-phone"> </i> 085-145-322-137</p>
+											<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
+                      <p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
 										</div>	
 									</div>
 									<!--begin::Form-->
@@ -311,7 +312,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													Tipe Pesanan 
 												</label>
 												<div class="col-4">
-													<input name="tipe_pesanan" class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
+													<input name="tipe_pesanan" class="form-control m-input" type="text" value="Express" disabled="true">
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -319,7 +320,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													catatan 
 												</label>
 												<div class="col-4">
-													<input name="catatan" class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
+													<input name="catatan_pesanan" class="form-control m-input" type="text" value="Express" disabled="true">
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -335,7 +336,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													Order Status : 
 												</label>
 												<div class="col-4">
-													<span name="order_status" class="m-badge  m-badge-DesignGrafis m-badge--wide">Selesai</span>
+													<span name="order_status" class="m-badge  m-badge-DesignGrafis m-badge--wide badge-size">Lunas</span>
 												</div>
 										  	</div>
 										</div>
@@ -347,66 +348,69 @@ License: You must have a valid license purchased only from themeforest(the above
 													<thead>
 														<tr>
 															<th>No</th>
-															<th>Pesanan</th>
-															<th>Ukuran</th>
-															<th>Finishing</th>
-															<th>Jumlah</th>
-															<th>Harga</th>
-															
-														</tr>
+																<th>Produk</th>
+																<th>Ukuran</th>
+																<th>Finishing</th>
+																<th>Jumlah</th>
+																<th>Harga</th>
+															</tr>
 													</thead>
 													<tbody>
 														<tr>
-															<td>1</td>
-															<td>Spanduk</td>
-															<td>160 x 60 cm</td>
-															<td>Cincin</td>
-															<td>320</td>
-															<td>Rp. 120.000</td>
+														<td>1.</td>
+															<td>Kartu nama kingstruk 260 1 sisi</td>
+															<td>-</td>
+															<td>Doff</td>
+															<td>2 box</td>
+															<td>Rp. 150.000</td>
+														</tr>
+														<tr>
+															<td>2.</td>
+															<td>Spanduk Korea</td>
+															<td>1.6 x 0.6 m</td>
+															<td>Cincin 4 buah</td>
+															<td>3 lembar</td>
+															<td>Rp. 175.000</td>
 														</tr>
 													</tbody>
 												</table>
-												<div class="m-datatable__pager m-datatable--paging-loaded clearfix">	
-													<div class="m-datatable__pager-info">
-														<div class="btn-group bootstrap-select m-datatable__pager-size" style="width: 300px; float: right;">
-															<p align="right"><b>Sub Total :</b> 
-																<span id="subTotal"> Rp. 120.000</span>
-															</p>
-															<p align="right"><b>Down Payment :</b>
-															 	<span id="downPayment"> Rp. 120.000</span>
-															 </p>
-															 <p align="right"><b>Diskon :</b>
-															 	<span id="diskon"> Rp. 20.000</span>
-															 </p>
-															<p align="right"><b>Sisa Pembayaran :</b>
-																<span id="sisa_pembayaran"> Rp. 120.000</span>
-															</p>
-															<p align="right" style="font-weight: 500; font-size: 2rem;">
-																Rp. 120.000
-															</p>
-														</div>	
+												* Express : <span id="express">Rp. 30.000</span><br>
+												* Diskon : <span id="diskon">Rp. 10.000</span> 
+													<div class="m-datatable__pager m-datatable--paging-loaded clearfix">	
+														<div class="m-datatable__pager-info">
+															<div class="btn-group bootstrap-select m-datatable__pager-size" style="width: 300px; float: right;">
+																<p align="right"><b>Total :</b> 
+																	<span id="total"> Rp. 345.000</span>
+																</p>
+																<p align="right"><b>Down Payment :</b>
+																	<span id="down_payment"> Rp. 172.500</span>
+																</p>
+																<p align="right"><b>Sisa Pembayaran :</b>
+																	<span id="sisa_pembayaran"> Rp. 0</span>
+																</p>
+															</div>		
+														</div>
+														<br>
+														<br>
+														<div class="container-ttd-head" >
+															<p align="Center">CS Menangani</p>
+														</div>
+														<div class="container-ttd-head" style="margin-left: 30px" >
+															<p align="Center">CS Pelunasan</p>
+														</div>
+														<br>
+														<br>
+														<br>
+														<br>
+														<br>
+														<br>
+														<div class="container-ttd" >
+															<p name="cs_menangani" align="Center">Vega Vatima</p>
+														</div>
+														<div class="container-ttd" style="margin-left: 30px" >
+															<p name="cs_pelunasan" align="Center">Ria Amelinda</p>
+														</div>
 													</div>
-													<br>
-													<br>
-													<div class="container-ttd-head" >
-			                                        	<p align="Center">CS Menangani</p>
-			                                        </div>
-			                                        <div class="container-ttd-head" style="margin-left: 30px" >
-			                                        	<p align="Center">CS Pelunasan</p>
-			                                        </div>
-													<br>
-													<br>
-													<br>
-													<br>
-													<br>
-													<br>
-			                                        <div class="container-ttd" >
-			                                        	<p name="cs_menangani" align="Center">Vega Vatima</p>
-			                                        </div>
-													<div class="container-ttd" style="margin-left: 30px" >
-			                                        	<p name="cs_pelunasan" align="Center">Ria Amelinda</p>
-			                                        </div>
-				                                </div>
 												<!--end: Datatable -->
 											</div>
 										</div>
@@ -491,14 +495,14 @@ License: You must have a valid license purchased only from themeforest(the above
 					input: $('#generalSearch'),
 				},
 				columns: [
-			
+		
 					{
 						field: 'No',
 						textAlign: 'center',
 						width: 50
 					},
 					{
-						field: 'Pesanan',
+						field: 'Produk',
 						textAlign: 'center',
 						width: 100
 					},
@@ -523,7 +527,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						width: 100
 					}
 
-					],
+				],
 				});
 			</script>
 	</body>

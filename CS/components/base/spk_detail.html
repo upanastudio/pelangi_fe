@@ -43,6 +43,12 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- end:: Style tambahan -->
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="../../../assets/demo/default/media/img/logo/favicon.ico" />
+		<style>
+			.badge-size {
+				font-size: 1rem !important;
+				padding: 5px 15px !important;
+			}
+		</style>
 	</head>
 	<!-- end::Head -->
     <!-- end::Body -->
@@ -273,7 +279,9 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="col-xl-12">
                                 <div class="m-portlet m-portlet--tab">
                                     <div class="m-portlet__head header">
-                                        <br>
+										<h3 class="header-pesanan"> 
+											SPK
+										</h3><br>
                                         <h3 class="header-pesanan-no"> 
                                             #123456789 
                                         </h3><br><br>
@@ -281,47 +289,48 @@ License: You must have a valid license purchased only from themeforest(the above
                                             Print
                                         </button>
                                         <div class="info">
-                                            <p name="nama_pelanggan" id="namaPelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p> 
-                                            <p name="no_telpon" id="noTelpon"><i class="fa fa-phone"> </i> 085-145-322-137</p> 
-                                            <p name="alamat" id="alamat"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
-                                        </div>		
+                                            <p id="nama_pelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p> 
+											<p id="no_telpon"><i class="fa fa-phone"> </i> 085-145-322-137</p>
+											<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
+                                            <p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
+										</div>		
                                     </div>
                                     <!--begin::Form-->
                                     <form class="m-form m-form--fit m-form--label-align-right">
-                                        <div class="m-portlet__body">
-                                            <div class="form-group m-form__group row">
-                                                <label for="example-text-input" class="col-2 col-form-label">
-                                                    Tipe Pesanan 
-                                                </label>
-                                                <div class="col-4">
-                                                    <input class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
-                                                </div>
-                                            </div>
-                                            <div class="form-group m-form__group row">
-                                                <label for="example-text-input" class="col-2 col-form-label">
-                                                    catatan 
-                                                </label>
-                                                <div class="col-4">
-                                                    <input class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
-                                                </div>
-                                            </div>
-                                            <div class="form-group m-form__group row">
-                                                <label for="example-text-input" class="col-2 col-form-label">
-                                                    Tanggal Pesanan 
-                                                </label>
-                                                <div class="col-4">
-                                                    <input class="form-control m-input" type="text" value="20-11-2018" id="example-text-input" disabled="true">
-                                                </div>
-                                            </div>
-                                            <div class="form-group m-form__group row">
-                                                <label for="example-text-input" class="col-2 col-form-label">
-                                                    Order Status : 
-                                                </label>
-                                                <div class="col-4">
-                                                    <span class="m-badge  m-badge-DesignGrafis m-badge--wide">Desain Grafis</span>
-                                                </div>
-                                                </div>
-                                        </div>
+										<div class="m-portlet__body">
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-2 col-form-label">
+													Tipe Pesanan 
+												</label>
+												<div class="col-4">
+													<input name="tipe_pesanan" class="form-control m-input" type="text" value="Express" disabled="true">
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-2 col-form-label">
+													catatan 
+												</label>
+												<div class="col-4">
+													<input name="catatan_pesanan" class="form-control m-input" type="text" value="Express" disabled="true">
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-2 col-form-label">
+													Tanggal Pesanan 
+												</label>
+												<div class="col-4">
+													<input name="tanggal_pesanan" class="form-control m-input" type="text" value="20-11-2018" disabled="true">
+												</div>
+											</div>
+											<div class="form-group m-form__group row">
+												<label for="example-text-input" class="col-2 col-form-label">
+													Order Status : 
+												</label>
+												<div class="col-4">
+													<span id="order_status" class="m-badge  m-badge--primary m-badge--wide badge-size">Desain Grafis</span>
+												</div>
+											</div>
+										</div>
                                         <div class="m-portlet m-portlet--mobile">
                                             <div class="m-portlet__body">
                                                 <!--begin: Datatable -->
@@ -329,32 +338,66 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <table class="table" id="tbl_detail_spk">
                                                     <thead>
                                                         <tr>
-                                                            <th>No</th>
-                                                            <th>Pesanan</th>
+															<th>No</th>
+                                                            <th>Produk</th>
                                                             <th>Ukuran</th>
                                                             <th>Finishing</th>
                                                             <th>Jumlah</th>
                                                             <th>Harga</th>
-                                                            
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>1</td>
-                                                            <td>Spanduk</td>
-                                                            <td>160 x 60 cm</td>
-                                                            <td>Cincin</td>
-                                                            <td>320</td>
-                                                            <td>Rp. 120.000</td>
-                                                        </tr>
+															<td>1.</td>
+                                                            <td>Kartu nama kingstruk 260 1 sisi</td>
+                                                            <td>-</td>
+                                                            <td>Doff</td>
+                                                            <td>2 box</td>
+                                                            <td>Rp. 150.000</td>
+														</tr>
+														<tr>
+															<td>2.</td>
+															<td>Spanduk Korea</td>
+															<td>1.6 x 0.6 m</td>
+															<td>Cincin 4 buah</td>
+															<td>3 lembar</td>
+															<td>Rp. 175.000</td>
+														</tr>
                                                     </tbody>
                                                 </table>
                                                 <div class="m-datatable__pager m-datatable--paging-loaded clearfix">
-                                                    	
-                                                    <p align="left"><b>CS Menangani :</b> <span id="nama-cs-menangani">Arfandi</span></p>
-                                                    <p align="left"><b>Designer     :</b> <span id="nama-designer">Surya Aditama</span></p>
-                                                    <p align="left"><b>Produksi     :</b> <span id="nama-produksi">-</span></p>
-                                                    <p align="left"><b>CS Pelunasan :</b> <span id="nama-cs-pelunasan">-</span></p>
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>CS Menangani :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_cs_menangani">Ahmad Rifaldi</p>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>Designer :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_designer">Surya Aditama</p>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>Produksi :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_produksi">-</p>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>CS Pelunasan :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_cs_pelunasan">-</p>
+														</div>
+													</div>
                                                 </div>
                                                 <!--end: Datatable -->
                                             </div>
@@ -399,7 +442,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="../../../assets/app/js/dashboard.js" type="text/javascript"></script>
 		<!--end::Page Snippets -->
 		<script src="../../../assets/demo/default/custom/components/datatables/base/data-local.js" type="text/javascript"></script>
-        	<script type="text/javascript">
+        <script type="text/javascript">
 			var tbl_detail_spk = $('#tbl_detail_spk').mDatatable({
 			data: {
 				saveState: {cookie: false},
@@ -448,7 +491,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					width: 50
 				},
 				{
-					field: 'Pesanan',
+					field: 'Produk',
 					textAlign: 'center',
 					width: 100
 				},
@@ -475,7 +518,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 			],
 		});
-			</script>
+		</script>
 	</body>
 	<!-- end::Body -->
 </html>

@@ -134,7 +134,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											<span class="m-menu__link-text">
 												Dashboard
 											</span>
-											
 										</span>
 									</span>
 								</a>
@@ -219,7 +218,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="m-portlet__head-caption">
 												<div class="m-portlet__head-title">
 													<h3 class="m-portlet__head-text">
-														Jumlah verifikasi
+														Jumlah SPK Selesai
 													</h3>
 												</div>
 											</div>
@@ -275,78 +274,63 @@ License: You must have a valid license purchased only from themeforest(the above
 											<thead>
 												<tr>
 													<th>No</th>
-													<th>Waktu Pemesanan</th>
-													<th>No Pesanan</th>
-													<th>Nama File</th>
-													<th>Tipe Pesanan</th>
-													<th>Ukuran</th>
+													<th>Tanggal</th>
+													<th>No SPK</th>
+													<th>Nama Pelanggan</th>
+													<th>No Telpon</th>
 													<th>Aksi</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>16.10, 20/19/2018</td>
-													<td>1384910</td>
-													<td>Spanduk Pengabdian</td>
-													<td>Spanduk</td>
-													<td>1.5 x 1 m</td>
+													<td>20/11/2018</td>
+													<td>201195002</td>
+													<td>Ibu Sumiati</td>
+													<td>085145322137</td>
 													<td>
-															<button type="button" class="btn-terima btn_terima_produksi" data-toggle="modal">
-																	Terima
-															</button>
-													</td>											
+														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+													</td>
+												</tr>									
 												<tr>
 													<td>2</td>
-													<td>16.10, 20/19/2018</td>
-													<td>1384910</td>
-													<td>Spanduk Pengabdian</td>
-													<td>Spanduk</td>
-													<td>1.5 x 1 m</td>
+													<td>10/11/2018</td>
+													<td>101195002</td>
+													<td>Upana Studio</td>
+													<td>082123456432</td>
 													<td>
-															<button type="button" class="btn-terima btn_terima_produksi" data-toggle="modal">
-																	Terima
-															</button>
-													</td>	
+														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+													</td>
 												</tr>
 												<tr>
 													<td>3</td>
-													<td>16.10, 20/19/2018</td>
-													<td>1384910</td>
-													<td>Spanduk Pengabdian</td>
-													<td>Spanduk</td>
-													<td>1.5 x 1 m</td>
+													<td>09/10/2018</td>
+													<td>091018002</td>
+													<td>Pak Teddy</td>
+													<td>0812347990123</td>
 													<td>
-															<button type="button" class="btn-terima btn_terima_produksi" data-toggle="modal">
-																	Terima
-															</button>
-													</td>	
+														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+													</td>
 												</tr>
 												<tr>
 													<td>4</td>
-													<td>16.10, 20/19/2018</td>
-													<td>1384910</td>
-													<td>Spanduk Pengabdian</td>
-													<td>Spanduk</td>
-													<td>1.5 x 1 m</td>
+													<td>05/11/2019</td>
+													<td>051119002</td>
+													<td>Pak Samsul</td>
+													<td>085321123223</td>
 													<td>
-															<button type="button" class="btn-terima btn_terima_produksi" data-toggle="modal">
-																	Terima
-															</button>
-													</td>	
+														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+													</td>
 												</tr>
 												<tr>
 													<td>5</td>
-													<td>16.10, 20/19/2018</td>
-													<td>1384910</td>
-													<td>Spanduk Pengabdian</td>
-													<td>Spanduk</td>
-													<td>1.5 x 1 m</td>
+													<td>09/10/2018</td>
+													<td>091018005</td>
+													<td>Pak Handoko</td>
+													<td>085234749519</td>
 													<td>
-															<button type="button" class="btn-terima btn_terima_produksi" data-toggle="modal">
-																	Terima
-															</button>
-													</td>	
+														<a href="components/base/pesanan_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian</a>
+													</td>
 												</tr>
 											</tbody>
 										</table>
@@ -439,35 +423,30 @@ License: You must have a valid license purchased only from themeforest(the above
 					
 				},
 				{
-					field: 'Waktu Pemesanan',
+					field: 'Tanggal',
 					textAlign: 'center',
 					type:'date',
 					
 				},
 				{
-					field: 'No Pesanan',
+					field: 'No SPK',
 					textAlign: 'center',
 	
 				},
 				{
-					field: 'Nama File',
-					textAlign: 'center',
-	
-				},
-				{
-					field: 'Tipe Pesanan',
+					field: 'Nama Pelanggan',
 					textAlign: 'center',
 					
 				},
 				{
-					field: 'Ukuran',
+					field: 'No Telpon',
 					textAlign: 'center',
-					
+				
 				},
 				{
 					field: 'Status',
 					textAlign: 'center',
-					
+				
 				},
 				{
 					field: 'Aksi',

@@ -43,6 +43,12 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- end:: Style tambahan -->
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="../../../assets/demo/default/media/img/logo/favicon.ico" />
+		<style>
+			.badge-size {
+				font-size: 1rem !important;
+				padding: 5px 15px !important;
+			}
+		</style>
 	</head>
 	<!-- end::Head -->
     <!-- end::Body -->
@@ -231,9 +237,10 @@ License: You must have a valid license purchased only from themeforest(the above
 											Print
 										</button>
 										<div class="info">
-											<p name="nama_pelanggan" id="namaPelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p> 
-											<p name="no_telpon" id="noTelpon"><i class="fa fa-phone"> </i> 085-145-322-137</p> 
-											<p name="alamat" id="alamat"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
+											<p id="nama_pelanggan"><i class="flaticon-users"> </i> Ahmad Rifaldi</p> 
+											<p id="no_telpon"><i class="fa fa-phone"> </i> 085-145-322-137</p>
+											<p id="email_pelanggan"><i class="fa fa-envelope-o "> </i> aldi4rifaldi@gmail.com</p> 
+											<p id="alamat_pelanggan"><i class="flaticon-placeholder-1"> </i> Jl. Poros Malino, Griya Riski Abadi blok C6</p>
 										</div>	
 									</div>
 									<!--begin::Form-->
@@ -244,7 +251,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													Tipe Pesanan 
 												</label>
 												<div class="col-4">
-													<input class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
+													<input name="tipe_pesanan" class="form-control m-input" type="text" value="Express" disabled="true">
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -252,7 +259,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													catatan 
 												</label>
 												<div class="col-4">
-													<input class="form-control m-input" type="text" value="Express" id="example-text-input" disabled="true">
+													<input name="catatan_pesanan" class="form-control m-input" type="text" value="Express" disabled="true">
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
@@ -260,54 +267,96 @@ License: You must have a valid license purchased only from themeforest(the above
 													Tanggal Pesanan 
 												</label>
 												<div class="col-4">
-													<input class="form-control m-input" type="text" value="20-11-2018" id="example-text-input" disabled="true">
+													<input name="tanggal_pesanan" class="form-control m-input" type="text" value="20-11-2018" disabled="true">
 												</div>
 											</div>
-										    <div class="form-group m-form__group row">
+										  <div class="form-group m-form__group row">
 												<label for="example-text-input" class="col-2 col-form-label">
 													Order Status : 
 												</label>
 												<div class="col-4">
-													<span class="m-badge   m-badge--info m-badge--wide">Produksi</span>
+													<span id="order_status" class="m-badge  m-badge--warning m-badge--wide badge-size">Produksi</span>
 												</div>
-										  	</div>
+										  </div>
 										</div>
 										<div class="m-portlet m-portlet--mobile">
 											<div class="m-portlet__body">
 												<!--begin: Datatable -->
 												<!-- <div class="m_datatable" id="local_data"></div> -->
-												<table class="table" id="tbl_detail_spk_desain">
+												<table class="table" id="tbl_detail_spk">
 													<thead>
 														<tr>
 															<th>No</th>
-															<th>Pesanan</th>
+															<th>Nama File</th>
+															<th>Produk</th>
 															<th>Ukuran</th>
 															<th>Finishing</th>
 															<th>Jumlah</th>
 															<th>Harga</th>
-															
 														</tr>
 													</thead>
 													<tbody>
 														<tr>
 															<td>1</td>
-															<td>Spanduk</td>
-															<td>160 x 60 cm</td>
-															<td>Cincin</td>
-															<td>320</td>
-															<td>Rp. 120.000</td>
+															<td>kartunama bagus</td>
+															<td>Kartu nama kingstruk 260 1 sisi</td>
+															<td>-</td>
+															<td>Doff</td>
+															<td>2 box</td>
+															<td>Rp. 150.000</td>
+														</tr>
+														<tr>
+															<td>2</td>
+															<td>spanduk hore</td>
+															<td>Spanduk Korea</td>
+															<td>1.6 x 0.6 m</td>
+															<td>Cincin 4 buah</td>
+															<td>3 lembar</td>
+															<td>Rp. 175.000</td>
 														</tr>
 													</tbody>
 												</table>
 												<div class="m-datatable__pager m-datatable--paging-loaded clearfix">
-													<button type="button" class="btn btn-primary" data-toggle="modal" style="float:right;" data-target="#modal_selesai">
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>CS Menangani :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_cs_menangani">Ahmad Rifaldi</p>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>Designer :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_designer">Surya Aditama</p>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>Produksi :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_produksi">Fascal Ivandry</p>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label class="col-2">
+															<b>CS Pelunasan :</b>
+														</label>
+														<div class="col-4">
+															<p id="nama_cs_pelunasan">-</p>
+														</div>
+													</div>
+													<button id="btn_selesai_produksi" type="button" class="btn btn-primary" data-toggle="modal" style="float:right;" data-target="#modal_selesai">
 															Selesai
 													</button>
-													<p align="left"><b>CS Menangani :</b> <span id="nama-cs-menangani">Arfandi</span></p>
+													<!-- <p align="left"><b>CS Menangani :</b> <span id="nama-cs-menangani">Arfandi</span></p>
 													<p align="left"><b>Designer     :</b> <span id="nama-designer">Surya Aditama</span></p>
 													<p align="left"><b>Produksi     :</b> <span id="nama-produksi">Sidik Permana</span></p>
-													<p align="left"><b>CS Pelunasan :</b> <span id="nama-cs-pelunasan">-</span></p>
-				                                </div>
+													<p align="left"><b>CS Pelunasan :</b> <span id="nama-cs-pelunasan">-</span></p> -->
+				                </div>
 												<!--end: Datatable -->
 											</div>
 										</div>
@@ -338,9 +387,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="list-pesanan">
 										<div class="head-pesanan">
 											<label class="col-4 col-form-label">
-												<h5>Pesanan 1</h5>
+												<h5><span id="nama_produk">Kartu Nama</span></h5>
 											</label>
-											<button style="float: right;" class="btn btn-secondary">
+											<button style="float: right;" class="btn btn-primary">
 												tambah bahan
 											</button>
 										</div>
@@ -350,8 +399,8 @@ License: You must have a valid license purchased only from themeforest(the above
 													Jenis Bahan
 												</label>
 												<div class="col-9">
-													<select style="width: 100%" name="jenis_bahan" class="form-control m-select2 dropdown_search" name="jenis_bahan">
-														<option value="bahan_1">
+													<select style="width: 100%" name="jenis_bahan" class="form-control m-select2 dropdown_search">
+														<option value="bahan_1" >
 															Bahan 1
 														</option >
 														<option value="bahan_2">
@@ -360,8 +409,8 @@ License: You must have a valid license purchased only from themeforest(the above
 														<option value="bahan_3">
 															Bahan 3
 														</option>
-														<option value="bahan_4">
-															Bahan 4
+														<option value="Kingstroke 260" selected="selected">
+															Kingstroke 260
 														</option>
 														<option value="akrilik">
 															Akrilik
@@ -398,7 +447,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<div class="form-group m-form__group row">
 												<label for="example-text-input" class="col-3 col-form-label">
-													Bahan terbuang
+													Waste
 												</label>
 												<div class="input-group col-9">
 													<input type="text" name="jumlah_bahan_terbuang" class="form-control" aria-label="Text input with dropdown button">
@@ -426,9 +475,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="list-pesanan">
 										<div class="head-pesanan">
 											<label class="col-4 col-form-label">
-												<h5>Pesanan 2</h5>
+												<h5>Spanduk</h5>
 											</label>
-											<button style="float: right;" class="btn btn-secondary">
+											<button style="float: right;" class="btn btn-primary">
 												tambah bahan
 											</button>
 										</div>
@@ -439,17 +488,17 @@ License: You must have a valid license purchased only from themeforest(the above
 												</label>
 												<div class="col-9">
 													<select style="width: 100%" name="jenis_bahan" class="form-control m-select2 dropdown_search" name="jenis_bahan">
-														<option value="bahan_1">
+														<option value="bahan_1" >
 															Bahan 1
 														</option >
 														<option value="bahan_2">
 															Bahan 2
 														</option>
-														<option value="bahan_3">
-															Bahan 3
+														<option value="korea" selected="selected">
+															Korea
 														</option>
-														<option value="bahan_4">
-															Bahan 4
+														<option value="Kingstroke 260">
+															Kingstroke 260
 														</option>
 														<option value="akrilik">
 															Akrilik
@@ -486,95 +535,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<div class="form-group m-form__group row">
 												<label for="example-text-input" class="col-3 col-form-label">
-													Bahan terbuang
-												</label>
-												<div class="input-group col-9">
-													<input type="text" name="jumlah_bahan_terbuang" class="form-control" aria-label="Text input with dropdown button">
-													<div class="input-group-append">
-														<select class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															<option value="1">
-																Set
-															</option>
-															<option value="1">
-																Lembar
-															</option>
-															<option value="1">
-																Unit
-															</option>
-															<option value="1">
-																dll
-															</option>
-														</select>
-													</div>
-												</div>
-											</div>
-										</div>
-										<hr>
-									</div>
-									<div class="list-pesanan">
-										<div class="head-pesanan">
-											<label class="col-4 col-form-label">
-												<h5>Pesanan 3</h5>
-											</label>
-											<button style="float: right;" class="btn btn-secondary">
-												tambah bahan
-											</button>
-										</div>
-										<div class="list_bahan">
-											<div class="form-group m-form__group row">
-												<label for="example-text-input" class="col-3 col-form-label">
-													Jenis Bahan
-												</label>
-												<div class="col-9">
-													<select style="width: 100%" name="jenis_bahan" class="form-control m-select2 dropdown_search" name="jenis_bahan">
-														<option value="bahan_1">
-															Bahan 1
-														</option >
-														<option value="bahan_2">
-															Bahan 2
-														</option>
-														<option value="bahan_3">
-															Bahan 3
-														</option>
-														<option value="bahan_4">
-															Bahan 4
-														</option>
-														<option value="akrilik">
-															Akrilik
-														</option>
-														<option value="silika">
-															Silika
-														</option>
-													</select>									
-												</div>
-											</div>
-											<div class="form-group m-form__group row">
-												<label for="example-text-input" class="col-3 col-form-label">
-													Jumlah
-												</label>
-												<div class="input-group col-9">
-													<input type="text" name="jumlah_bahan_terpakai" class="form-control" aria-label="Text input with dropdown button">
-													<div class="input-group-append">
-														<select class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															<option value="1">
-																Set
-															</option>
-															<option value="1">
-																Lembar
-															</option>
-															<option value="1">
-																Unit
-															</option>
-															<option value="1">
-																dll
-															</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<div class="form-group m-form__group row">
-												<label for="example-text-input" class="col-3 col-form-label">
-													Bahan terbuang
+													Waste
 												</label>
 												<div class="input-group col-9">
 													<input type="text" name="jumlah_bahan_terbuang" class="form-control" aria-label="Text input with dropdown button">
@@ -645,7 +606,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<script src="../../../assets/app/js/dashboard.js" type="text/javascript"></script>
 			<!--end::Page Snippets -->
 			<script type="text/javascript">
-			var tbl_detail_spk_desain = $('#tbl_detail_spk_desain').mDatatable({
+				var tbl_detail_spk = $('#tbl_detail_spk').mDatatable({
 			data: {
 				saveState: {cookie: false},
 				/*type: 'remote',
@@ -690,10 +651,15 @@ License: You must have a valid license purchased only from themeforest(the above
 				{
 					field: 'No',
 					textAlign: 'center',
-					width: 50
+					width: 100
 				},
 				{
-					field: 'Pesanan',
+					field: 'Nama File',
+					textAlign: 'center',
+					width: 100
+				},
+				{
+					field: 'Produk',
 					textAlign: 'center',
 					width: 100
 				},
@@ -720,62 +686,60 @@ License: You must have a valid license purchased only from themeforest(the above
 
 			],
 		});
-		</script>
-		<script>
-				var Select2 = function() {
-					var demos = function(){
-						// basic
-						$('.dropdown_search, .dropdown_search_validate').select2({
-							placeholder: "Select a state"
-						});
-					}
-					var modalDemos = function(){
-						$('#m_select2_modal').on('shown.bs.modal', function () {
+			</script>
+			<script>
+					var Select2 = function() {
+						var demos = function(){
 							// basic
-							$('.dropdown_search_modal').select2({
+							$('.dropdown_search, .dropdown_search_validate').select2({
 								placeholder: "Select a state"
 							});
-						});
-					}
-					return {
-						init: function() {
-							demos();
-							modalDemos();
 						}
-					};
-				}();
-				//== Initialization
-				jQuery(document).ready(function() {
-					Select2.init();
-				});
-		</script>
-		<script>
-			//== Class definition
-			var SweetAlert2Demo = function() {
-
-			//== Demos
-			var initDemos = function() {
-					
-					$('#m_sweetalert_demo_3_3').click(function(e) {
-							swal("Good job!", "You clicked the button!", "success");
+						var modalDemos = function(){
+							$('#m_select2_modal').on('shown.bs.modal', function () {
+								// basic
+								$('.dropdown_search_modal').select2({
+									placeholder: "Select a state"
+								});
+							});
+						}
+						return {
+							init: function() {
+								demos();
+								modalDemos();
+							}
+						};
+					}();
+					//== Initialization
+					jQuery(document).ready(function() {
+						Select2.init();
 					});
+			</script>
+			<script>
+				//== Class definition
+				var SweetAlert2Demo = function() {
 
-				
-			};
+				//== Demos
+				var initDemos = function() {
+						
+						$('#m_sweetalert_demo_3_3').click(function(e) {
+								swal("SPK telah selesai!", "SPK akan dikirim ke CS untuk pelunasan!", "success");
+						});
+				};
 
-			return {
-					//== Init
-					init: function() {
-							initDemos();
-					},
-			};
-			}();
+				return {
+						//== Init
+						init: function() {
+								initDemos();
+						},
+				};
+				}();
 
-			//== Class Initialization
-			jQuery(document).ready(function() {
-			SweetAlert2Demo.init();
-			});
-		</script>
+				//== Class Initialization
+				jQuery(document).ready(function() {
+				SweetAlert2Demo.init();
+				});
+			</script>
 	</body>
 	<!-- end::Body -->
 </html>

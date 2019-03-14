@@ -355,11 +355,39 @@ float: right;
     color: white;
 }
 
+.m-badge--cs {
+    background-color: #5E1742;
+    color: white;
+}
+
+
 .btn_rincian {
     color:white; 
     width:80px;
 }
 
+#btn_pending {
+    margin-left : 10px;
+    border-radius : 20px;
+}
+
+#btn_terima {
+    border-radius : 20px;
+}
+
 #m_aside_header_menu_mobile_toggle {
     display: none !important;
+}
+
+.badge-size {
+    font-size: 1rem !important;
+    padding: 5px 15px !important;
+}
+
+#btn_lunas {
+ border-radius :20px;
+}
+
+#btn_selesai_desain {
+    border-radius : 20px;
 }

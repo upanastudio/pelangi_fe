@@ -300,10 +300,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="m-portlet__body">
 										<div align="Center" class=" m-font-karyawan" style="font-size: 4rem; color:#21212; font-weight: 500;">
-												7 
+											<span id="jumlah_down_payment"> 7 </span>	 
 										</div>
 										<div align="center" class="pemasukan_hari_ini" style="font-size: 1.5rem; color:#21212; font-weight: 500;">
-											 Rp. 420.000
+												<span id="total_down_payment"> Rp. 420.000 </span>	 
 										</div>
 									</div>
 								</div>
@@ -321,10 +321,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="m-portlet__body">
 										<div align="Center" class=" m-font-karyawan" style="font-size: 4rem; color:#21212; font-weight: 500;">
-												139 
+												<span id="jumlah_pesanan_lunas"> 139 </span>
 										</div>
 										<div align="center" class="pemasukan_total_saya" style="font-size: 1.5rem; color:#21212; font-weight: 500;">
-											 Rp. 8.340.000
+												<span id="total_pesanan_lunas">Rp. 8.340.000</span> 
 										</div>
 									</div>
 								</div>
@@ -367,8 +367,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<th>Tanggal</th>
 											<th>No Pesanan</th>
 											<th>Nama Pelanggan</th>
-											<th>Tipe Pesanan</th>
-											<th>Diskon</th>
+											<th>No Telpon</th>
 											<th>Status</th>
 											<th>Aksi</th>
 										</tr>
@@ -379,10 +378,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<td>20/19/2018</td>
 											<td>#14253617</td>
 											<td>Aldi</td>
-											<td>Spanduk</td>
-											<td>
-												<span class="m-badge  m-badge--hijau m-badge--wide">30.000</span>
-											</td>
+											<td>085145322xxx</td>
 											<td>
 												<span class="m-badge m-badge--brand m-badge--wide">Belum Lunas</span>
 											</td>
@@ -396,15 +392,12 @@ License: You must have a valid license purchased only from themeforest(the above
 											<td>20/19/2018</td>
 											<td>#14253617</td>
 											<td>Aldi</td>
-											<td>Spanduk</td>
-											<td>
-												<span class="m-badge  m-badge--hijau m-badge--wide">30.000</span>
-											</td>
+											<td>085145322xxx</td>
 											<td>
 												<span class="m-badge m-badge--brand m-badge--wide">Belum Lunas</span>
 											</td>
 											<td>
-												<a href="#" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian
+												<a href="pesanan_saya_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian
 												</a>
 											</td>
 										</tr>
@@ -413,15 +406,12 @@ License: You must have a valid license purchased only from themeforest(the above
 											<td>20/19/2018</td>
 											<td>#14253617</td>
 											<td>Aldi</td>
-											<td>Spanduk</td>
-											<td>
-												<span class="m-badge  m-badge--hijau m-badge--wide">30.000</span>
-											</td>
+											<td>085145322xxx</td>
 											<td>
 												<span class="m-badge m-badge--success m-badge--wide">Lunas</span>
 											</td>
 											<td>
-												<a href="#" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian
+												<a href="pesanan_saya_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian
 												</a>
 											</td>
 										</tr>
@@ -430,15 +420,12 @@ License: You must have a valid license purchased only from themeforest(the above
 											<td>20/19/2018</td>
 											<td>#14253617</td>
 											<td>Aldi</td>
-											<td>Spanduk</td>
-											<td>
-												<span class="m-badge  m-badge--hijau m-badge--wide">30.000</span>
-											</td>
+											<td>085145322xxx</td>
 											<td>
 												<span class="m-badge m-badge--success m-badge--wide">Lunas</span>
 											</td>
 											<td>
-												<a href="#" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian
+												<a href="pesanan_saya_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian
 												</a>
 											</td>
 										</tr>
@@ -447,15 +434,12 @@ License: You must have a valid license purchased only from themeforest(the above
 											<td>20/19/2018</td>
 											<td>#14253617</td>
 											<td>Aldi</td>
-											<td>Spanduk</td>
+											<td>085145322xxx</td>
 											<td>
-												<span class="m-badge  m-badge--hijau m-badge--wide">30.000</span>
+												<span class="m-badge m-badge--success m-badge--wide">Lunas</span>
 											</td>
 											<td>
-												<span class="m-badge  m-badge--danger m-badge--wide">Ditolak</span>
-											</td>
-											<td>
-												<a href="#" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian
+												<a href="pesanan_saya_detail.html" class="btn btn-sm btn-primary" style="color:white; width:80px;">Rincian
 												</a>
 											</td>
 										</tr>
@@ -565,7 +549,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					width: 100
 				},
 				{
-					field: 'Tipe Pesanan',
+					field: 'No Telpon',
 					textAlign: 'center',
 					width: 100
 				},
