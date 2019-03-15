@@ -391,3 +391,43 @@ float: right;
 #btn_selesai_desain {
     border-radius : 20px;
 }
+
+.m-datatable__table {
+    min-height: 0 !important;
+}
+
+.item-font {
+    font-size: 4rem;
+    font-weight : 500;
+}
+
+.item-font-kecil {
+    font-size: 2.3rem;
+    font-weight : 500;
+}
+
+.item-font-jumlah {
+    font-size: 2rem;
+    font-weight : 500;
+}
+
+.item-font-jumlah-kecil {
+    font-size: 1.3rem;
+    font-weight : 500;
+}
+
+.m--bg-accent-hijau {
+    background-color: #18bb28 !important;
+}
+.m--bg-accent-merah {
+    background-color: #bb183e !important;
+}
+.m--bg-accent-kuning {
+    background-color: #eaad21 !important;
+}
+.m--bg-accent-biru {
+    background-color: #21b2ea !important;
+}
+.m--bg-accent-ungu {
+    background-color: #924388 !important;
+}
