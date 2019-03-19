@@ -431,3 +431,10 @@ float: right;
 .m--bg-accent-ungu {
     background-color: #924388 !important;
 }
+
+.pilih_satuan {
+    font-size: 1.1rem !important;
+    font-weight: 500;
+    background-color: #2c2e3e !important;
+    color: white !important;
+}

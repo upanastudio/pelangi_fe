@@ -135,77 +135,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			</button>
 			<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
 				<!-- BEGIN: Aside Menu -->
-				<div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark" data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500" >
-					<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
-						<!-- DASHBOARD -->
-						<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
-							<a  href="index.html" class="m-menu__link ">
-								<i class="m-menu__link-icon flaticon-line-graph"></i>
-								<span class="m-menu__link-title">
-									<span class="m-menu__link-wrap">
-										<span class="m-menu__link-text">
-											Dashboard
-										</span>
-									</span>
-								</span>
-							</a>
-						</li>
-						<!-- Bahan Baku -->
-						<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
-							<a href="components/base/bahan_baku.html" class="m-menu__link m-menu__toggle">
-								<i class="m-menu__link-icon flaticon-graphic-2"></i>
-								<span class="m-menu__link-text">
-									Bahan Baku
-								</span>
-							</a>
-						</li>
-						<!-- Master Data -->
-						<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
-							<a href="components/base/master_data.html" class="m-menu__link m-menu__toggle">
-								<i class="m-menu__link-icon fa fa-database"></i>
-								<span class="m-menu__link-text">
-									Master Data
-								</span>
-							</a>
-						</li>
-						<!-- Relasi -->
-						<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
-							<a href="components/base/relasi.html" class="m-menu__link m-menu__toggle">
-								<i class="m-menu__link-icon fa fa-code-fork"></i>
-								<span class="m-menu__link-text">
-									Relasi
-								</span>
-							</a>
-						</li>
-						<!-- Harga -->
-						<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
-							<a href="components/base/harga.html" class="m-menu__link m-menu__toggle">
-								<i class="m-menu__link-icon fa 	fa-calculator"></i>
-								<span class="m-menu__link-text">
-									Harga
-								</span>
-							</a>
-						</li>
-						<!-- KEHADIRAN -->
-						<li class="m-menu__item m-menu__item--submenu" aria-haspopup="true" data-menu-submenu-toggle="hover">
-							<a href="components/base/kehadiran.html" class="m-menu__link m-menu__toggle">
-								<i class="m-menu__link-icon fa fa-user-o"></i>
-								<span class="m-menu__link-text">
-									Kehadiran
-								</span>
-							</a>	
-						</li>
-						<!-- Settings -->
-						<li class="m-menu__item" aria-haspopup="true" data-menu-submenu-toggle="hover">
-							<a href="components/base/settings.html" class="m-menu__link m-menu__toggle">
-								<i class="m-menu__link-icon fa fa-gear"></i>
-								<span class="m-menu__link-text">
-									Pengaturan
-								</span>
-							</a>
-						</li>
-					</ul>
-				</div>
+				
 				<!-- END: Aside Menu -->
 			</div>
 			<!-- END: Left Aside -->
@@ -225,11 +155,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								</li>
 							</ul>
 						</div>
-						<select name="pilih_satuan" style="width: 350px" class="form-control m-input m-input--square pilih_satuan">
-							<option value="lembar">
+						<select style="width: 350px"  name="pilih_satuan" class="form-control m-input m-input--square pilih_satuan" onchange="location = this.options[this.selectedIndex].value;">
+							<option value="http://localhost/DashboardPelangi/ptpelangi/ga/index_lembar.html">
 								Lembar
 							</option>
-							<option value="roll">
+							<option selected=""  value="http://localhost/DashboardPelangi/ptpelangi/ga/index_roll.html">
 								Roll
 							</option>
 						</select>
@@ -258,8 +188,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 								<div class="m-portlet__body">
-									<canvas id="bahan-baku-lembar"></canvas>
-									<canvas style="display: none" id="bahan-baku-roll"></canvas>
+									<canvas id="bahan-baku-roll"></canvas>
 								</div>
 							</div>
 						</div>
@@ -293,12 +222,12 @@ License: You must have a valid license purchased only from themeforest(the above
 	<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 	<script>
-		var MONTHS = ['Bahan 1', 'Bahan 2', 'Bahan 3', 'Bahan 4', 'Bahan 5', 'Bahan 6', 'Bahan 7', 'Bahan 8', 'Bahan 9', 'Bahan 10', 'Bahan 11', 'Bahan 12'];
-		const data = [10,40,30,-29,50,-40,-40,10,20,-30,12,43];
+		var MONTHS = ['Roll 1', 'Roll 2', 'Roll 3', 'Roll 4', 'Roll 5', 'Roll 6', 'Roll 7', 'Roll 8', 'Roll 9', 'Roll 10', 'Roll 11', 'Roll 12'];
+		const data = [30,10,10,-19,80,-30,-50,45,13,-42,32,59];
 		const colours = data.map((value) => value < 0 ? '#C62828' : '#8BC34A');
 		var color = Chart.helpers.color;
 		var horizontalBarChartData = {
-			labels: ['Bahan 1', 'Bahan 2', 'Bahan 3', 'Bahan 4', 'Bahan 5', 'Bahan 6', 'Bahan 7', 'Bahan 8', 'Bahan 9', 'Bahan 10', 'Bahan 11', 'Bahan 12'],
+			labels: ['Roll 1', 'Roll 2', 'Roll 3', 'Roll 4', 'Roll 5', 'Roll 6', 'Roll 7', 'Roll 8', 'Roll 9', 'Roll 10', 'Roll 11', 'Roll 12'],
 			datasets: [{
 				label: 'Jumlah Bahan',
 				backgroundColor: colours,
@@ -308,7 +237,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			}]
 		};
 		window.onload = function() {
-			var ctx = document.getElementById('bahan-baku-lembar').getContext('2d');
+			var ctx = document.getElementById('bahan-baku-roll').getContext('2d');
 			window.myHorizontalBar = new Chart(ctx, {
 				type: 'horizontalBar',
 				data: horizontalBarChartData,
@@ -330,7 +259,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	</script>
 	<script>
 		var MONTHS = ['Bahan A', 'Bahan B', 'Bahan C', 'Bahan D', 'Bahan E', 'Bahan F', 'Bahan G', 'Bahan H', 'Bahan I', 'Bahan J', 'Bahan K', 'Bahan L'];
-		const data = [10,40,30,-29,50,-40,-40,10,20,-30,12,43];
+		const data = [30,10,10,-19,80,-30,-50,45,13,-42,32,59];
 		const colours = data.map((value) => value < 0 ? '#C62828' : '#8BC34A');
 		var color = Chart.helpers.color;
 		var horizontalBarChartData = {
