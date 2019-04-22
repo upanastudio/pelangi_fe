@@ -1,0 +1,23 @@
+body { 
+	background: url(404.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#btn_kembali {
+	margin-top: 35%;
+	font-size: 1.8rem !important;
+	font-weight: 500;
+	width: 300px;
+	height: 50px;
+	border-radius: 30px;
+	background-color: #db343b !important;
+	border-color: transparent !important;
+}
+#btn_kembali:hover {
+	background-color: #53b359 !important;
+	}
+
+	
