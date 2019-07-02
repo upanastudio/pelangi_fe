@@ -51,6 +51,18 @@ License: You must have a valid license purchased only from themeforest(the above
 			-webkit-user-select: none;
 			-ms-user-select: none;
 		}
+		#chartdiv {
+			width: 100%;
+			height: 500px;
+		}
+		@media (max-width: 650px) {
+			.pilih_satuan {
+				width: 45vw !important;
+			}
+			.m-portlet .m-portlet__body {
+				padding: .5rem .5rem;
+			}
+		}
 	</style>	
 </head>
 <!-- end::Head -->
@@ -225,12 +237,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								</li>
 							</ul>
 						</div>
-						<select name="pilih_satuan" style="width: 350px" class="form-control m-input m-input--square pilih_satuan">
+						<select name="pilih_satuan" style="width: 20vw" class="form-control m-input m-input--square pilih_satuan">
+							<option selected="" value="roll">
+								Roll
+							</option>
 							<option value="lembar">
 								Lembar
-							</option>
-							<option value="roll">
-								Roll
 							</option>
 						</select>
 					</div>
@@ -258,8 +270,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 								<div class="m-portlet__body">
-									<canvas id="bahan-baku-lembar"></canvas>
-									<canvas style="display: none" id="bahan-baku-roll"></canvas>
+									<div id="chartdiv"></div>
 								</div>
 							</div>
 						</div>
@@ -287,12 +298,9 @@ License: You must have a valid license purchased only from themeforest(the above
 	<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500"data-scroll-speed="300">
 		<i class="la la-arrow-up"></i>
 	</div>
-	<!-- end::Scroll Top -->		    
-
-	<!--begin::Base Scripts -->
-	<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
-	<script>
+	<!-- end::Scroll Top -->	
+	
+	<!-- <script>
 		var MONTHS = ['Bahan 1', 'Bahan 2', 'Bahan 3', 'Bahan 4', 'Bahan 5', 'Bahan 6', 'Bahan 7', 'Bahan 8', 'Bahan 9', 'Bahan 10', 'Bahan 11', 'Bahan 12'];
 		const data = [10,40,30,-29,50,-40,-40,10,20,-30,12,43];
 		const colours = data.map((value) => value < 0 ? '#C62828' : '#8BC34A');
@@ -363,8 +371,95 @@ License: You must have a valid license purchased only from themeforest(the above
 					}
 				});
 		};
-	</script>
+	</script> -->
 	<script src="http://localhost:35729/livereload.js"></script>
 </body>
+	<!-- Resources -->
+	<script src="https://www.amcharts.com/lib/4/core.js"></script>
+	<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/material.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+	<script>
+		am4core.ready(function() {
+
+		// Themes begin
+		am4core.useTheme(am4themes_material);
+		am4core.useTheme(am4themes_animated);
+		// Themes end
+
+		 // Create chart instance
+		var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+		// Add data
+		chart.data = [{
+		  "barang": "Bahan 1",
+		  "stock": 23,
+		  "request": 18
+		},{
+		  "barang": "Bahan 2",
+		  "stock": 26,
+		  "request": 22
+		},{
+		  "barang": "Bahan 3",
+		  "stock": 30,
+		  "request": 23
+		},{
+		  "barang": "Bahan 4",
+		  "stock": 29,
+		  "request": 25
+		},{
+		  "barang": "Bahan 5",
+		  "stock": 24,
+		  "request": 25
+		}];
+
+		// Create axes
+		var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+		categoryAxis.dataFields.category = "barang";
+		categoryAxis.numberFormatter.numberFormat = "#";
+		categoryAxis.renderer.inversed = true;
+		categoryAxis.renderer.grid.template.location = 0;
+		categoryAxis.renderer.cellStartLocation = 0.1;
+		categoryAxis.renderer.cellEndLocation = 0.9;
+
+		var  valueAxis = chart.xAxes.push(new am4charts.ValueAxis()); 
+		valueAxis.renderer.opposite = true;
+
+		// Create series
+		function createSeries(field, name) {
+		  var series = chart.series.push(new am4charts.ColumnSeries());
+		  series.dataFields.valueX = field;
+		  series.dataFields.categoryY = "barang";
+		  series.name = name;
+		  series.columns.template.tooltipText = "{name}: [bold]{valueX}[/]";
+		  series.columns.template.height = am4core.percent(100);
+		  series.sequencedInterpolation = true;
+
+		  var valueLabel = series.bullets.push(new am4charts.LabelBullet());
+		  valueLabel.label.text = "{valueX}";
+		  valueLabel.label.horizontalCenter = "left";
+		  valueLabel.label.dx = 10;
+		  valueLabel.label.hideOversized = false;
+		  valueLabel.label.truncate = false;
+
+		  var categoryLabel = series.bullets.push(new am4charts.LabelBullet());
+		  categoryLabel.label.text = "{name}";
+		  categoryLabel.label.horizontalCenter = "right";
+		  categoryLabel.label.dx = -10;
+		  categoryLabel.label.fill = am4core.color("#fff");
+		  categoryLabel.label.hideOversized = false;
+		  categoryLabel.label.truncate = false;
+		}
+
+		createSeries("stock", "Stock");
+		createSeries("request", "Request");
+
+		}); // end am4core.ready()
+	</script>	    
+
+	<!--begin::Base Scripts -->
+	<script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 <!-- end::Body -->
 </html>
